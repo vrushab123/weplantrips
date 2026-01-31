@@ -36,6 +36,36 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 2500); // Show loading screen for 2.5 seconds
     });
 
+    // Mobile Hamburger Menu
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    const mobileOverlay = document.querySelector('.mobile-overlay');
+
+    if (navToggle && navLinks && mobileOverlay) {
+        navToggle.addEventListener('click', () => {
+            navToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            mobileOverlay.classList.toggle('active');
+        });
+
+        // Close menu when clicking overlay
+        mobileOverlay.addEventListener('click', () => {
+            navToggle.classList.remove('active');
+            navLinks.classList.remove('active');
+            mobileOverlay.classList.remove('active');
+        });
+
+        // Close menu when clicking a link
+        const navLinksItems = navLinks.querySelectorAll('a');
+        navLinksItems.forEach(link => {
+            link.addEventListener('click', () => {
+                navToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+                mobileOverlay.classList.remove('active');
+            });
+        });
+    }
+
     // 1. Hero Text Animation
     const heroTl = gsap.timeline({ defaults: { ease: "power3.out" } });
 

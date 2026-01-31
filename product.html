@@ -65,6 +65,56 @@
             --poster-color: transparent;
         }
 
+        /* Fallback Image Styles */
+        .fallback-image {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: radial-gradient(circle at center, #1a1a1a, #0a0a0a);
+            z-index: 10;
+        }
+
+        .fallback-image img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .fallback-notice {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 20px;
+            padding: 0.8rem 1.5rem;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+
+        .fallback-notice span {
+            color: #d4af37;
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+
+        .fallback-notice p {
+            color: #ccc;
+            font-size: 0.75rem;
+            margin: 0;
+        }
+
+
         .product-details {
             flex: 1;
         }
@@ -161,14 +211,21 @@
     <div class="product-page-container">
         <!-- 3D AR Viewer -->
         <div class="product-3d-view">
-            <!-- 
-                Using a sample placeholder model because specific marble scans are not available yet. 
-                Replace 'src' with your own .glb file path.
-            -->
-            <model-viewer src="https://modelviewer.dev/shared-assets/models/Astronaut.glb"
+            <!-- Fallback Image (shown if 3D model fails) -->
+            <div class="fallback-image" id="fallback-image" style="display: none;">
+                <img src="assets/images/marble_vase.png" alt="Product Image" id="fallback-img">
+                <div class="fallback-notice">
+                    <span>📷 Image View</span>
+                    <p>3D model unavailable</p>
+                </div>
+            </div>
+
+            <!-- 3D Model Viewer -->
+            <model-viewer id="model-viewer" src="https://modelviewer.dev/shared-assets/models/Astronaut.glb"
                 alt="3D model of marble artifact" camera-controls touch-action="pan-y" auto-rotate
                 environment-image="neutral" shadow-intensity="1" exposure="1" camera-orbit="0deg 75deg 105%"
-                min-camera-orbit="auto auto 5%" max-camera-orbit="auto auto 200%" interaction-prompt="auto">
+                min-camera-orbit="auto auto 5%" max-camera-orbit="auto auto 200%" interaction-prompt="auto"
+                loading="eager">
             </model-viewer>
         </div>
 
@@ -216,15 +273,72 @@
             document.getElementById('p-price').textContent = price;
         }
 
-        // Log 3D model status
-        const modelViewer = document.querySelector('model-viewer');
+        // 3D Model with Fallback Logic
+        const modelViewer = document.querySelector('#model-viewer');
+        const fallbackImage = document.getElementById('fallback-image');
+        const fallbackImg = document.getElementById('fallback-img');
+        let modelLoaded = false;
+        let loadTimeout;
+
+        // Map product names to images
+        const productImages = {
+            'Imperial Vase': 'assets/images/marble_vase.png',
+            'Bust of Apollo': 'assets/images/marble_bust.png',
+            'Fluid Motion': 'assets/images/marble_abstract.png',
+            'Royal Panel': 'assets/images/marble_panel.png',
+            'Lush Vase': 'assets/images/marble_vase.png',
+            'Modern Head': 'assets/images/marble_bust.png',
+            'Elegant Vase': 'assets/images/marble_vase.png',
+            'Abstract Form': 'assets/images/marble_abstract.png',
+            'Decorative Panel': 'assets/images/marble_panel.png'
+        };
+
+        // Update fallback image based on product
+        if (name && productImages[name]) {
+            fallbackImg.src = productImages[name];
+        }
+
+        function showFallback() {
+            console.log('⚠️ Showing fallback image - 3D model failed to load');
+            if (modelViewer) {
+                modelViewer.style.display = 'none';
+            }
+            if (fallbackImage) {
+                fallbackImage.style.display = 'flex';
+            }
+        }
+
         if (modelViewer) {
+            // Set timeout - if model doesn't load in 10 seconds, show fallback
+            loadTimeout = setTimeout(() => {
+                if (!modelLoaded) {
+                    console.log('⏱️ Model loading timeout - switching to fallback');
+                    showFallback();
+                }
+            }, 10000);
+
+            // Success - model loaded
             modelViewer.addEventListener('load', () => {
                 console.log('✅ 3D Model loaded successfully');
+                modelLoaded = true;
+                clearTimeout(loadTimeout);
             });
+
+            // Error - model failed to load
             modelViewer.addEventListener('error', (event) => {
-                console.error('❌ Model loading error:', event);
+                console.error('❌ 3D Model loading error:', event);
+                clearTimeout(loadTimeout);
+                showFallback();
             });
+
+            // Check if model-viewer is supported
+            if (!('customElements' in window)) {
+                console.warn('⚠️ Custom elements not supported - showing fallback');
+                showFallback();
+            }
+        } else {
+            console.error('❌ Model viewer element not found');
+            showFallback();
         }
     </script>
 </body>

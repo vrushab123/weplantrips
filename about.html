@@ -297,8 +297,12 @@
         <div class="nav-toggle">
             <span></span>
             <span></span>
+            <span></span>
         </div>
     </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-overlay"></div>
 
     <!-- Hero Section -->
     <section class="about-hero">
@@ -402,6 +406,34 @@
 
     <script>
         gsap.registerPlugin(ScrollTrigger);
+
+        // Mobile Hamburger Menu
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        const mobileOverlay = document.querySelector('.mobile-overlay');
+
+        if (navToggle && navLinks && mobileOverlay) {
+            navToggle.addEventListener('click', () => {
+                navToggle.classList.toggle('active');
+                navLinks.classList.toggle('active');
+                mobileOverlay.classList.toggle('active');
+            });
+
+            mobileOverlay.addEventListener('click', () => {
+                navToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+                mobileOverlay.classList.remove('active');
+            });
+
+            const navLinksItems = navLinks.querySelectorAll('a');
+            navLinksItems.forEach(link => {
+                link.addEventListener('click', () => {
+                    navToggle.classList.remove('active');
+                    navLinks.classList.remove('active');
+                    mobileOverlay.classList.remove('active');
+                });
+            });
+        }
 
         // Animate sections on scroll
         gsap.utils.toArray('.story-grid, .value-card, .stat-item').forEach((element, index) => {
