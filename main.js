@@ -6,17 +6,35 @@ gsap.registerPlugin(ScrollTrigger);
 // Initialize 3D Scene
 initThreeScene();
 
-// Mock Data for "Product Showcase"
+// Mock Data for "Product Showcase" - Indian Pricing
 const products = [
-    { name: "Imperial Vase", price: "$2,500", image: "assets/images/marble_vase.png" },
-    { name: "Bust of Apollo", price: "$4,200", image: "assets/images/marble_bust.png" },
-    { name: "Fluid Motion", price: "$3,800", image: "assets/images/marble_abstract.png" },
-    { name: "Royal Panel", price: "$1,500", image: "assets/images/marble_panel.png" },
-    { name: "Lush Vase", price: "$2,100", image: "assets/images/marble_vase.png" },
-    { name: "Modern Head", price: "$3,900", image: "assets/images/marble_bust.png" },
+    { name: "Imperial Vase", price: "₹2,08,000", image: "assets/images/marble_vase.png" },
+    { name: "Bust of Apollo", price: "₹3,50,000", image: "assets/images/marble_bust.png" },
+    { name: "Fluid Motion", price: "₹3,15,000", image: "assets/images/marble_abstract.png" },
+    { name: "Royal Panel", price: "₹1,25,000", image: "assets/images/marble_panel.png" },
+    { name: "Lush Vase", price: "₹1,75,000", image: "assets/images/marble_vase.png" },
+    { name: "Modern Head", price: "₹3,25,000", image: "assets/images/marble_bust.png" },
 ];
 
 document.addEventListener('DOMContentLoaded', () => {
+
+    // Loading Screen
+    const loadingScreen = document.querySelector('.loading-screen');
+    const mainContent = document.querySelector('main');
+
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            // Add circular reveal animation to main content
+            if (mainContent) {
+                mainContent.classList.add('content-revealed');
+            }
+
+            // Hide loading screen
+            setTimeout(() => {
+                loadingScreen.classList.add('hidden');
+            }, 500);
+        }, 2500); // Show loading screen for 2.5 seconds
+    });
 
     // 1. Hero Text Animation
     const heroTl = gsap.timeline({ defaults: { ease: "power3.out" } });

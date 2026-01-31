@@ -37,17 +37,31 @@
         .product-3d-view {
             flex: 1.5;
             height: 600px;
-            background: var(--glass-bg);
-            border: 1px solid var(--glass-border);
+            background: linear-gradient(135deg, rgba(17, 17, 17, 0.9), rgba(30, 30, 30, 0.9));
+            border: 1px solid rgba(212, 175, 55, 0.3);
             border-radius: 20px;
             position: relative;
             overflow: hidden;
+            box-shadow:
+                0 10px 40px rgba(0, 0, 0, 0.5),
+                0 0 20px rgba(212, 175, 55, 0.1),
+                inset 0 0 60px rgba(212, 175, 55, 0.05);
+            transition: all 0.4s ease;
+        }
+
+        .product-3d-view:hover {
+            border-color: rgba(212, 175, 55, 0.5);
+            box-shadow:
+                0 15px 50px rgba(0, 0, 0, 0.6),
+                0 0 30px rgba(212, 175, 55, 0.2),
+                inset 0 0 80px rgba(212, 175, 55, 0.08);
+            transform: translateY(-5px);
         }
 
         model-viewer {
             width: 100%;
             height: 100%;
-            background-color: #111;
+            background: radial-gradient(circle at center, #1a1a1a, #0a0a0a);
             --poster-color: transparent;
         }
 
@@ -111,38 +125,7 @@
             transform: scale(1.05);
         }
 
-        /* Custom AR Button Styling within model-viewer */
-        #ar-button {
-            background-color: #fff;
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            bottom: 20px;
-            padding: 12px 24px;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 16px;
-            font-weight: 600;
-            color: #000;
-            border-radius: 30px;
-            border: 2px solid #d4af37;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
-            z-index: 10;
-            min-width: 200px;
-            text-align: center;
-        }
 
-        #ar-button:hover {
-            background-color: #d4af37;
-            color: #fff;
-            transform: translateX(-50%) scale(1.05);
-            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
-        }
-
-        #ar-button:active {
-            transform: translateX(-50%) scale(0.98);
-        }
 
         @media (max-width: 900px) {
             .product-page-container {
@@ -168,7 +151,10 @@
     <nav style="position: absolute;">
         <div class="logo">JSK_N_CRAFTS</div>
         <div class="nav-links">
-            <a href="index.html">Back to Gallery</a>
+            <a href="index.html">Home</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="about.html">About Us</a>
+            <a href="testimonials.html">Testimonials</a>
         </div>
     </nav>
 
@@ -180,14 +166,9 @@
                 Replace 'src' with your own .glb file path.
             -->
             <model-viewer src="https://modelviewer.dev/shared-assets/models/Astronaut.glb"
-                ios-src="https://modelviewer.dev/shared-assets/models/Astronaut.usdz"
-                alt="A 3D model of a marble artifact" ar ar-modes="scene-viewer quick-look" camera-controls
-                touch-action="pan-y" auto-rotate environment-image="neutral" shadow-intensity="1" exposure="1"
-                camera-orbit="0deg 75deg 105%" min-camera-orbit="auto auto 5%" max-camera-orbit="auto auto 200%">
-
-                <button slot="ar-button" id="ar-button">
-                    👁️ View in your space
-                </button>
+                alt="3D model of marble artifact" camera-controls touch-action="pan-y" auto-rotate
+                environment-image="neutral" shadow-intensity="1" exposure="1" camera-orbit="0deg 75deg 105%"
+                min-camera-orbit="auto auto 5%" max-camera-orbit="auto auto 200%" interaction-prompt="auto">
             </model-viewer>
         </div>
 
@@ -198,7 +179,7 @@
             </div>
 
             <h1 class="product-title" id="p-title">Imperial Vase</h1>
-            <div class="product-price" id="p-price">$2,500</div>
+            <div class="product-price" id="p-price">₹2,08,000</div>
 
             <p class="product-description">
                 This exquisite piece is hand-carved from the finest Carrara marble.
@@ -210,16 +191,18 @@
                 <button class="btn btn-primary" onclick="alert('Added to Enquiry List')">Enquire Now</button>
             </div>
 
-            <p style="margin-top: 2rem; font-size: 0.8rem; color: #666;">
-                * Click the "View in your space" button on the 3D viewer (mobile only) to see this item in your room via
-                AR.
+            <p style="margin-top: 2rem; font-size: 0.9rem; color: #999; line-height: 1.6;">
+                <strong style="color: #d4af37;">🎨 3D Viewer Instructions:</strong><br>
+                • Drag to rotate the model and view from all angles<br>
+                • Scroll or pinch to zoom in and out<br>
+                • Works on both desktop and mobile devices<br>
+                • Experience the intricate details of our marble craftsmanship
             </p>
         </div>
     </div>
 
     <script>
-        // Simple script to populate details from URL params (if we had them)
-        // For now, it defaults to the static content above or can be dynamic
+        // Populate product details from URL params
         const urlParams = new URLSearchParams(window.location.search);
         const name = urlParams.get('name');
         const price = urlParams.get('price');
@@ -233,37 +216,15 @@
             document.getElementById('p-price').textContent = price;
         }
 
-        // AR Functionality Check and Enhancement
+        // Log 3D model status
         const modelViewer = document.querySelector('model-viewer');
-
         if (modelViewer) {
-            // Check if AR is supported
             modelViewer.addEventListener('load', () => {
-                console.log('Model loaded successfully');
+                console.log('✅ 3D Model loaded successfully');
             });
-
-            // Log when AR is activated
-            modelViewer.addEventListener('ar-status', (event) => {
-                console.log('AR Status:', event.detail.status);
-                if (event.detail.status === 'not-presenting') {
-                    console.log('AR not available on this device');
-                }
+            modelViewer.addEventListener('error', (event) => {
+                console.error('❌ Model loading error:', event);
             });
-
-            // Ensure AR button is visible on supported devices
-            const arButton = modelViewer.querySelector('#ar-button');
-            if (arButton) {
-                arButton.addEventListener('click', () => {
-                    console.log('AR button clicked');
-                });
-            }
-
-            // Check for AR support
-            if (modelViewer.canActivateAR) {
-                console.log('AR is supported on this device');
-            } else {
-                console.log('AR is not supported on this device');
-            }
         }
     </script>
 </body>
