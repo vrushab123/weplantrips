@@ -1,138 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JSK_N_CRAFTS | Exquisite Marble Artistry</title>
-    <meta name="description" content="Premium marble stone art store. Sculptures, slabs, and bespoke designs.">
+    <meta name="description" content="WE PLAN TRIPS — Your trusted partner for unforgettable travel experiences. Discover curated destinations, personalized itineraries, and hassle-free trip planning.">
+    <title>WE PLAN TRIPS — Explore the World With Us</title>
 
-    <!-- Fonts -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;500&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Styles -->
     <link rel="stylesheet" href="style.css">
-
-    <!-- Three.js & GSAP Import Map -->
-    <script type="importmap">
-        {
-            "imports": {
-                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
-                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
-            }
-        }
-    </script>
 </head>
-
 <body>
 
-    <!-- Loading Screen -->
-    <div class="loading-screen">
-        <div class="loader-container">
-            <div class="loader-rings">
-                <div class="ring ring-1"></div>
-                <div class="ring ring-2"></div>
-                <div class="ring ring-3"></div>
-            </div>
-            <div class="loader-logo">JSK_N_CRAFTS</div>
-            <div class="loader-text">Crafting Excellence</div>
+    <!-- ===== HERO SECTION ===== -->
+    <section id="hero" class="hero">
+
+        <!-- Slides -->
+        <div class="hero__slides">
+            <div class="hero__slide active" style="background-image: url('images/hero-slide-1.png')"></div>
+            <div class="hero__slide" style="background-image: url('images/hero-slide-2.png')"></div>
+            <div class="hero__slide" style="background-image: url('images/hero-slide-3.png')"></div>
         </div>
-    </div>
 
-    <!-- 3D Background Canvas -->
-    <canvas id="bg-canvas"></canvas>
+        <!-- Dark overlay -->
+        <div class="hero__overlay"></div>
 
-    <!-- Navigation -->
-    <nav>
-        <div class="logo">JSK_N_CRAFTS</div>
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="about.html">About Us</a>
-            <a href="testimonials.html">Testimonials</a>
-            <a href="#contact">Contact</a>
+        <!-- Content -->
+        <div class="hero__content">
+            <p class="hero__tagline">Explore · Dream · Discover</p>
+            <h1 class="hero__title">Find Your Own Oasis</h1>
+            <p class="hero__subtitle">Handcrafted itineraries and unforgettable travel experiences <br> brought to you by <strong>WE PLAN TRIPS</strong></p>
+            <a href="#" class="hero__cta" id="hero-cta">PLAN YOUR TRIP</a>
         </div>
-        <div class="nav-toggle">
-            <span></span>
-            <span></span>
-            <span></span>
+
+        <!-- Navigation arrows -->
+        <button class="hero__arrow hero__arrow--left" id="hero-prev" aria-label="Previous slide">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <button class="hero__arrow hero__arrow--right" id="hero-next" aria-label="Next slide">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"/></svg>
+        </button>
+
+        <!-- Dot indicators -->
+        <div class="hero__dots" id="hero-dots">
+            <button class="hero__dot active" data-index="0" aria-label="Go to slide 1"></button>
+            <button class="hero__dot" data-index="1" aria-label="Go to slide 2"></button>
+            <button class="hero__dot" data-index="2" aria-label="Go to slide 3"></button>
         </div>
-    </nav>
 
-    <!-- Mobile Menu Overlay -->
-    <div class="mobile-overlay"></div>
+    </section>
 
-    <!-- Main Content Overlay -->
-    <main>
-        <!-- Hero Section -->
-        <section id="hero">
-            <div class="hero-content">
-                <h1 class="hero-title">Timeless <br> <span>Elegance</span></h1>
-                <p class="hero-subtitle">Meticulously crafted marble masterpieces for the discerning collector.</p>
-                <div class="cta-group">
-                    <a href="#collection" class="btn btn-primary">Explore Collection</a>
-                    <a href="#contact" class="btn btn-secondary">Enquire Now</a>
-                </div>
-            </div>
-            <div class="scroll-indicator">
-                <span>Scroll</span>
-                <div class="line"></div>
-            </div>
-        </section>
-
-        <!-- Collection Section Placeholder (Grid populated by JS) -->
-        <section id="collection">
-            <div class="section-header">
-                <h2>Curated Collection</h2>
-                <p>Discover our range of hand-finished sculptures and artifacts.</p>
-            </div>
-            <div class="product-grid" id="product-grid"></div>
-        </section>
-
-        <!-- About Section -->
-        <section id="about">
-            <div class="about-container">
-                <div class="about-image">
-                    <img src="assets/images/marble_panel.png" alt="Marble Craftsmanship">
-                </div>
-                <div class="about-content">
-                    <h2>Our Heritage</h2>
-                    <div class="gold-line"></div>
-                    <p>At JSK_N_CRAFTS, we believe that stone speaks. For over three decades, our artisans have been
-                        transforming raw marble into breathtaking works of art.</p>
-                    <p>Each piece is a testament to the timeless beauty of natural stone, meticulously carved to
-                        perfection. From classical Roman inspirations to modern abstract forms, our collection embodies
-                        luxury and permanence.</p>
-                    <a href="#contact" class="btn btn-secondary">Learn More</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section Placeholder -->
-        <section id="contact">
-            <div class="contact-container">
-                <div class="contact-info">
-                    <h2>Get in Touch</h2>
-                    <p>Bring your vision to life with our bespoke marble services.</p>
-                </div>
-                <form class="contact-form">
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="email" placeholder="Your Email" required>
-                    <textarea placeholder="Your Message" rows="4" required></textarea>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                </form>
-            </div>
-        </section>
-    </main>
-
-    <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    <script type="module" src="main.js"></script>
+    <script src="script.js"></script>
 </body>
-
 </html>
