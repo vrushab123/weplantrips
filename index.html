@@ -7,20 +7,33 @@
     <meta name="description"
         content="WE PLAN TRIPS — Your trusted partner for unforgettable travel experiences. Discover curated destinations, personalized itineraries, and hassle-free trip planning.">
     <title>WE PLAN TRIPS — Explore the World With Us</title>
-
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
-
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- ===== NAVBAR ===== -->
+    <!-- LOADER -->
+    <div class="loader" id="page-loader">
+        <div class="loader__content">
+            <div class="loader__plane">✈</div>
+            <div class="loader__brand">
+                <span class="loader__we">WE</span>
+                <span class="loader__plan">PLAN</span>
+                <span class="loader__trips">TRIPS</span>
+            </div>
+            <div class="loader__bar">
+                <div class="loader__bar-fill"></div>
+            </div>
+            <p class="loader__text">Planning your experience...</p>
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
     <nav class="navbar" id="navbar">
         <div class="navbar__container">
             <a href="#" class="navbar__logo" id="navbar-logo">
@@ -31,20 +44,18 @@
             <ul class="navbar__menu" id="navbar-menu">
                 <li><a href="#hero" class="navbar__link active">Home</a></li>
                 <li><a href="#about" class="navbar__link">About</a></li>
-                <li><a href="#destinations" class="navbar__link">Destinations</a></li>
+                <li><a href="destinations.html" class="navbar__link">Destinations</a></li>
                 <li><a href="#services" class="navbar__link">Services</a></li>
                 <li><a href="#testimonials" class="navbar__link">Testimonials</a></li>
                 <li><a href="#contact" class="navbar__link navbar__link--cta">Contact Us</a></li>
             </ul>
             <button class="navbar__toggle" id="navbar-toggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span></span><span></span><span></span>
             </button>
         </div>
     </nav>
 
-    <!-- ===== HERO SECTION ===== -->
+    <!-- HERO -->
     <section id="hero" class="hero">
         <div class="hero__slides">
             <div class="hero__slide active" style="background-image: url('images/hero-slide-1.png')"></div>
@@ -78,7 +89,7 @@
         </div>
     </section>
 
-    <!-- ===== ABOUT SECTION ===== -->
+    <!-- ABOUT -->
     <section id="about" class="about">
         <div class="container">
             <div class="about__grid">
@@ -115,275 +126,353 @@
                 <div class="about__visual">
                     <div class="about__image-wrapper">
                         <img src="images/hero-slide-1.png" alt="Tropical travel destination" class="about__image">
-                        <!-- <div class="about__experience-badge">
-                            <span class="about__experience-number">10+</span>
-                            <span class="about__experience-text">Years of<br>Experience</span>
-                        </div> -->
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ===== STATS STRIP ===== -->
+    <!-- STATS -->
     <section class="stats">
         <div class="container">
             <div class="stats__grid">
-                <div class="stats__item">
-                    <span class="stats__number" data-target="5000">0</span>
-                    <span class="stats__plus">+</span>
+                <div class="stats__item"><span class="stats__number" data-target="5000">0</span><span
+                        class="stats__plus">+</span>
                     <p class="stats__label">Happy Travellers</p>
                 </div>
-                <div class="stats__item">
-                    <span class="stats__number" data-target="120">0</span>
-                    <span class="stats__plus">+</span>
+                <div class="stats__item"><span class="stats__number" data-target="120">0</span><span
+                        class="stats__plus">+</span>
                     <p class="stats__label">Destinations</p>
                 </div>
-                <div class="stats__item">
-                    <span class="stats__number" data-target="50">0</span>
-                    <span class="stats__plus">+</span>
+                <div class="stats__item"><span class="stats__number" data-target="50">0</span><span
+                        class="stats__plus">+</span>
                     <p class="stats__label">Tour Packages</p>
                 </div>
-                <div class="stats__item">
-                    <span class="stats__number" data-target="10">0</span>
-                    <span class="stats__plus">+</span>
+                <div class="stats__item"><span class="stats__number" data-target="10">0</span><span
+                        class="stats__plus">+</span>
                     <p class="stats__label">Years Experience</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ===== POPULAR DESTINATIONS ===== -->
+    <!-- DESTINATIONS — Center-Focus Carousel -->
     <section id="destinations" class="destinations">
         <div class="container">
             <p class="section-label">Where To Go</p>
-            <h2 class="section-title section-title--center">Popular <span>Destinations</span></h2>
+            <h2 class="section-title section-title--center">Top Popular <span>Destinations</span></h2>
             <p class="section-subtitle">Explore our handpicked collection of the world's most stunning destinations</p>
+        </div>
+        <div class="dest-carousel" id="dest-carousel">
+            <div class="dest-carousel__track" id="dest-carousel-track">
+                <a href="destination-bali.html" class="dest-ccard" data-index="0">
+                    <img src="images/dest-bali.png" alt="Bali" class="dest-ccard__img">
+                    <div class="dest-ccard__info">
+                        <h3>Bali</h3>
+                        <p>3 Packages</p><span class="dest-ccard__btn">View All &rarr;</span>
+                    </div>
+                </a>
+                <a href="destination-thailand.html" class="dest-ccard" data-index="1">
+                    <img src="images/dest-thailand.png" alt="Thailand" class="dest-ccard__img">
+                    <div class="dest-ccard__info">
+                        <h3>Thailand</h3>
+                        <p>3 Packages</p><span class="dest-ccard__btn">View All &rarr;</span>
+                    </div>
+                </a>
+                <a href="destination-maldives.html" class="dest-ccard" data-index="2">
+                    <img src="images/dest-maldives.png" alt="Maldives" class="dest-ccard__img">
+                    <div class="dest-ccard__info">
+                        <h3>Maldives</h3>
+                        <p>3 Packages</p><span class="dest-ccard__btn">View All &rarr;</span>
+                    </div>
+                </a>
+                <a href="destination-dubai.html" class="dest-ccard" data-index="3">
+                    <img src="images/dest-dubai.png" alt="Dubai" class="dest-ccard__img">
+                    <div class="dest-ccard__info">
+                        <h3>Dubai</h3>
+                        <p>3 Packages</p><span class="dest-ccard__btn">View All &rarr;</span>
+                    </div>
+                </a>
+                <a href="destination-kashmir.html" class="dest-ccard" data-index="4">
+                    <img src="images/dest-kashmir.png" alt="Kashmir" class="dest-ccard__img">
+                    <div class="dest-ccard__info">
+                        <h3>Kashmir</h3>
+                        <p>3 Packages</p><span class="dest-ccard__btn">View All &rarr;</span>
+                    </div>
+                </a>
+                <a href="destination-goa.html" class="dest-ccard" data-index="5">
+                    <img src="images/dest-goa.png" alt="Goa" class="dest-ccard__img">
+                    <div class="dest-ccard__info">
+                        <h3>Goa</h3>
+                        <p>3 Packages</p><span class="dest-ccard__btn">View All &rarr;</span>
+                    </div>
+                </a>
+                <a href="destination-switzerland.html" class="dest-ccard" data-index="6">
+                    <img src="images/dest-switzerland.png" alt="Switzerland" class="dest-ccard__img">
+                    <div class="dest-ccard__info">
+                        <h3>Switzerland</h3>
+                        <p>3 Packages</p><span class="dest-ccard__btn">View All &rarr;</span>
+                    </div>
+                </a>
+                <a href="destination-paris.html" class="dest-ccard" data-index="7">
+                    <img src="images/dest-paris.png" alt="Paris" class="dest-ccard__img">
+                    <div class="dest-ccard__info">
+                        <h3>Paris</h3>
+                        <p>3 Packages</p><span class="dest-ccard__btn">View All &rarr;</span>
+                    </div>
+                </a>
+                <a href="destination-singapore.html" class="dest-ccard" data-index="8">
+                    <img src="images/dest-singapore.png" alt="Singapore" class="dest-ccard__img">
+                    <div class="dest-ccard__info">
+                        <h3>Singapore</h3>
+                        <p>3 Packages</p><span class="dest-ccard__btn">View All &rarr;</span>
+                    </div>
+                </a>
+                <a href="destination-manali.html" class="dest-ccard" data-index="9">
+                    <img src="images/dest-manali.png" alt="Manali" class="dest-ccard__img">
+                    <div class="dest-ccard__info">
+                        <h3>Manali</h3>
+                        <p>3 Packages</p><span class="dest-ccard__btn">View All &rarr;</span>
+                    </div>
+                </a>
+            </div>
+        </div>
 
-            <div class="destinations__grid">
-                <div class="dest-card dest-card--large">
-                    <img src="images/dest-bali.png" alt="Bali, Indonesia" class="dest-card__img">
-                    <div class="dest-card__overlay">
-                        <span class="dest-card__location">📍 Bali, Indonesia</span>
-                        <h3 class="dest-card__name">Bali</h3>
-                        <p class="dest-card__info">Starting from ₹45,000</p>
+        <!-- WHY CHOOSE US — Icon Strip -->
+
+        <!-- WHY CHOOSE US — Icon Strip -->
+        <section class="features-strip">
+            <div class="container">
+                <div class="features-strip__grid">
+                    <div class="features-strip__item">
+                        <div class="features-strip__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
+                            </svg>
+                        </div>
+                        <h3 class="features-strip__title">Special Activities</h3>
+                        <p class="features-strip__desc">Handpicked local experiences, adventure sports, cultural tours
+                            and
+                            hidden gems curated just for you.</p>
                     </div>
-                </div>
-                <div class="dest-card">
-                    <img src="images/dest-paris.png" alt="Paris, France" class="dest-card__img">
-                    <div class="dest-card__overlay">
-                        <span class="dest-card__location">📍 Paris, France</span>
-                        <h3 class="dest-card__name">Paris</h3>
-                        <p class="dest-card__info">Starting from ₹85,000</p>
+                    <div class="features-strip__item">
+                        <div class="features-strip__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                                <polyline points="14 2 14 8 20 8" />
+                                <line x1="16" y1="13" x2="8" y2="13" />
+                                <line x1="16" y1="17" x2="8" y2="17" />
+                            </svg>
+                        </div>
+                        <h3 class="features-strip__title">Travel Arrangement</h3>
+                        <p class="features-strip__desc">Complete end-to-end travel planning — flights, hotels, transfers
+                            and
+                            everything in between.</p>
                     </div>
-                </div>
-                <div class="dest-card">
-                    <img src="images/dest-maldives.png" alt="Maldives" class="dest-card__img">
-                    <div class="dest-card__overlay">
-                        <span class="dest-card__location">📍 Maldives</span>
-                        <h3 class="dest-card__name">Maldives</h3>
-                        <p class="dest-card__info">Starting from ₹70,000</p>
+                    <div class="features-strip__item">
+                        <div class="features-strip__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                                <circle cx="12" cy="7" r="4" />
+                            </svg>
+                        </div>
+                        <h3 class="features-strip__title">Your Private Guide</h3>
+                        <p class="features-strip__desc">Experienced local guides who know every corner, ensuring you
+                            never
+                            miss a moment of your journey.</p>
                     </div>
-                </div>
-                <div class="dest-card">
-                    <img src="images/dest-switzerland.png" alt="Switzerland" class="dest-card__img">
-                    <div class="dest-card__overlay">
-                        <span class="dest-card__location">📍 Switzerland</span>
-                        <h3 class="dest-card__name">Switzerland</h3>
-                        <p class="dest-card__info">Starting from ₹1,20,000</p>
-                    </div>
-                </div>
-                <div class="dest-card">
-                    <img src="images/dest-dubai.png" alt="Dubai, UAE" class="dest-card__img">
-                    <div class="dest-card__overlay">
-                        <span class="dest-card__location">📍 Dubai, UAE</span>
-                        <h3 class="dest-card__name">Dubai</h3>
-                        <p class="dest-card__info">Starting from ₹60,000</p>
-                    </div>
-                </div>
-                <div class="dest-card dest-card--large">
-                    <img src="images/dest-kashmir.png" alt="Kashmir, India" class="dest-card__img">
-                    <div class="dest-card__overlay">
-                        <span class="dest-card__location">📍 Kashmir, India</span>
-                        <h3 class="dest-card__name">Kashmir</h3>
-                        <p class="dest-card__info">Starting from ₹25,000</p>
+                    <div class="features-strip__item">
+                        <div class="features-strip__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                        </div>
+                        <h3 class="features-strip__title">Location Manager</h3>
+                        <p class="features-strip__desc">Dedicated on-ground coordinators at every destination to handle
+                            logistics and ensure a seamless trip.</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- ===== SERVICES ===== -->
-    <section id="services" class="services">
-        <div class="container">
-            <p class="section-label">What We Offer</p>
-            <h2 class="section-title section-title--center">Our <span>Services</span></h2>
-            <p class="section-subtitle">Everything you need for a perfect trip, all under one roof</p>
-
-            <div class="services__grid">
-                <div class="service-card">
-                    <div class="service-card__icon">🗺️</div>
-                    <h3 class="service-card__title">Tour Packages</h3>
-                    <p class="service-card__desc">Curated domestic & international tour packages for solo, couple,
-                        family or group trips.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-card__icon">🛂</div>
-                    <h3 class="service-card__title">Visa Assistance</h3>
-                    <p class="service-card__desc">Hassle-free visa processing and documentation — we handle the
-                        paperwork for you.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-card__icon">✈️</div>
-                    <h3 class="service-card__title">Flight Booking</h3>
-                    <p class="service-card__desc">Best deals on domestic & international flights. We find the most
-                        affordable options.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-card__icon">🏨</div>
-                    <h3 class="service-card__title">Hotel Reservations</h3>
-                    <p class="service-card__desc">Premium handpicked hotels & resorts to suit every budget and
-                        preference.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-card__icon">🚗</div>
-                    <h3 class="service-card__title">Car Rentals</h3>
-                    <p class="service-card__desc">Comfortable and reliable car rental services with experienced drivers.
-                    </p>
-                </div>
-                <div class="service-card">
-                    <div class="service-card__icon">🎯</div>
-                    <h3 class="service-card__title">Custom Trips</h3>
-                    <p class="service-card__desc">Tell us your dream destination and we'll craft a fully personalized
-                        travel experience.</p>
+        <!-- SERVICES -->
+        <section id="services" class="services">
+            <div class="container">
+                <p class="section-label">What We Offer</p>
+                <h2 class="section-title section-title--center">Our <span>Services</span></h2>
+                <p class="section-subtitle">Everything you need for a perfect trip, all under one roof</p>
+                <div class="services__grid">
+                    <div class="service-card">
+                        <div class="service-card__icon">🗺️</div>
+                        <h3 class="service-card__title">Tour Packages</h3>
+                        <p class="service-card__desc">Curated domestic & international tour packages for solo, couple,
+                            family or group trips.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-card__icon">🛂</div>
+                        <h3 class="service-card__title">Visa Assistance</h3>
+                        <p class="service-card__desc">Hassle-free visa processing and documentation — we handle the
+                            paperwork for you.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-card__icon">✈️</div>
+                        <h3 class="service-card__title">Flight Booking</h3>
+                        <p class="service-card__desc">Best deals on domestic & international flights. We find the most
+                            affordable options.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-card__icon">🏨</div>
+                        <h3 class="service-card__title">Hotel Reservations</h3>
+                        <p class="service-card__desc">Premium handpicked hotels & resorts to suit every budget and
+                            preference.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-card__icon">🚗</div>
+                        <h3 class="service-card__title">Car Rentals</h3>
+                        <p class="service-card__desc">Comfortable and reliable car rental services with experienced
+                            drivers.
+                        </p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-card__icon">🎯</div>
+                        <h3 class="service-card__title">Custom Trips</h3>
+                        <p class="service-card__desc">Tell us your dream destination and we'll craft a fully
+                            personalized
+                            travel experience.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- ===== TESTIMONIALS ===== -->
-    <section id="testimonials" class="testimonials">
-        <div class="container">
-            <p class="section-label">What They Say</p>
-            <h2 class="section-title section-title--center">Client <span>Testimonials</span></h2>
-            <p class="section-subtitle">Hear from travellers who explored the world with us</p>
-
-            <div class="testimonials__grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-card__stars">★★★★★</div>
-                    <p class="testimonial-card__text">"WE PLAN TRIPS made our Bali honeymoon absolutely magical. Every
-                        detail was taken care of — from flights to the surprise candle-light dinner. Can't recommend
-                        them enough!"</p>
-                    <div class="testimonial-card__author">
-                        <div class="testimonial-card__avatar">RS</div>
-                        <div>
-                            <h4 class="testimonial-card__name">Rahul & Sneha</h4>
-                            <p class="testimonial-card__trip">Bali Honeymoon Package</p>
+        <!-- TESTIMONIALS -->
+        <section id="testimonials" class="testimonials">
+            <div class="container">
+                <p class="section-label">What They Say</p>
+                <h2 class="section-title section-title--center">Client <span>Testimonials</span></h2>
+                <p class="section-subtitle">Hear from travellers who explored the world with us</p>
+                <div class="testimonials__grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-card__stars">★★★★★</div>
+                        <p class="testimonial-card__text">"WE PLAN TRIPS made our Bali honeymoon absolutely magical.
+                            Every
+                            detail was taken care of — from flights to the surprise candle-light dinner. Can't recommend
+                            them enough!"</p>
+                        <div class="testimonial-card__author">
+                            <div class="testimonial-card__avatar">RS</div>
+                            <div>
+                                <h4 class="testimonial-card__name">Rahul & Sneha</h4>
+                                <p class="testimonial-card__trip">Bali Honeymoon Package</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-card__stars">★★★★★</div>
+                        <p class="testimonial-card__text">"Our family trip to Switzerland was phenomenal. The itinerary
+                            was
+                            perfectly paced, the hotels were amazing, and the team was always available. Truly
+                            world-class
+                            service!"</p>
+                        <div class="testimonial-card__author">
+                            <div class="testimonial-card__avatar">PK</div>
+                            <div>
+                                <h4 class="testimonial-card__name">Priya Kapoor</h4>
+                                <p class="testimonial-card__trip">Switzerland Family Trip</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-card__stars">★★★★★</div>
+                        <p class="testimonial-card__text">"I've used many travel agencies before but WE PLAN TRIPS is on
+                            another level. Their Dubai package was value for money and the whole experience felt so
+                            premium."</p>
+                        <div class="testimonial-card__author">
+                            <div class="testimonial-card__avatar">AM</div>
+                            <div>
+                                <h4 class="testimonial-card__name">Arjun Mehta</h4>
+                                <p class="testimonial-card__trip">Dubai Group Tour</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-card__stars">★★★★★</div>
-                    <p class="testimonial-card__text">"Our family trip to Switzerland was phenomenal. The itinerary was
-                        perfectly paced, the hotels were amazing, and the team was always available. Truly world-class
-                        service!"</p>
-                    <div class="testimonial-card__author">
-                        <div class="testimonial-card__avatar">PK</div>
-                        <div>
-                            <h4 class="testimonial-card__name">Priya Kapoor</h4>
-                            <p class="testimonial-card__trip">Switzerland Family Trip</p>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section id="contact" class="cta-section">
+            <div class="cta-section__bg" style="background-image: url('images/hero-slide-2.png')"></div>
+            <div class="cta-section__overlay"></div>
+            <div class="container cta-section__content">
+                <h2 class="cta-section__title">Ready For Your Next Adventure?</h2>
+                <p class="cta-section__text">Let us plan the perfect trip for you. Get in touch today and receive a free
+                    personalised itinerary!</p>
+                <div class="cta-section__actions">
+                    <a href="tel:+919999999999" class="btn btn--orange">📞 Call Us Now</a>
+                    <a href="https://wa.me/919999999999" class="btn btn--outline" target="_blank" rel="noopener">💬
+                        WhatsApp
+                        Us</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__grid">
+                    <div class="footer__col">
+                        <div class="footer__brand"><span class="navbar__logo-we">WE</span><span
+                                class="navbar__logo-plan">PLAN</span><span class="navbar__logo-trips">TRIPS</span></div>
+                        <p class="footer__about">Your trusted partner for unforgettable travel experiences. We turn your
+                            travel dreams into reality with curated itineraries and premium service.</p>
+                        <div class="footer__socials">
+                            <a href="#" aria-label="Facebook" class="footer__social">📘</a>
+                            <a href="#" aria-label="Instagram" class="footer__social">📸</a>
+                            <a href="#" aria-label="Twitter" class="footer__social">🐦</a>
+                            <a href="#" aria-label="YouTube" class="footer__social">🎬</a>
                         </div>
                     </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-card__stars">★★★★★</div>
-                    <p class="testimonial-card__text">"I've used many travel agencies before but WE PLAN TRIPS is on
-                        another level. Their Dubai package was value for money and the whole experience felt so
-                        premium."</p>
-                    <div class="testimonial-card__author">
-                        <div class="testimonial-card__avatar">AM</div>
-                        <div>
-                            <h4 class="testimonial-card__name">Arjun Mehta</h4>
-                            <p class="testimonial-card__trip">Dubai Group Tour</p>
-                        </div>
+                    <div class="footer__col">
+                        <h4 class="footer__heading">Quick Links</h4>
+                        <ul class="footer__links">
+                            <li><a href="#hero">Home</a></li>
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="#destinations">Destinations</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#testimonials">Testimonials</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__col">
+                        <h4 class="footer__heading">Top Destinations</h4>
+                        <ul class="footer__links">
+                            <li><a href="#">Bali, Indonesia</a></li>
+                            <li><a href="#">Maldives</a></li>
+                            <li><a href="#">Dubai, UAE</a></li>
+                            <li><a href="#">Kashmir, India</a></li>
+                            <li><a href="#">Switzerland</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__col">
+                        <h4 class="footer__heading">Contact Us</h4>
+                        <ul class="footer__contact">
+                            <li>📞 +91 99999 99999</li>
+                            <li>✉️ info@weplantrips.com</li>
+                            <li>📍 Your City, India</li>
+                            <li>🕐 Mon – Sat: 10 AM – 7 PM</li>
+                        </ul>
                     </div>
                 </div>
+                <div class="footer__bottom">
+                    <p>&copy; 2025 WE PLAN TRIPS. All Rights Reserved.</p>
+                </div>
             </div>
-        </div>
-    </section>
+        </footer>
 
-    <!-- ===== CTA SECTION ===== -->
-    <section id="contact" class="cta-section">
-        <div class="cta-section__bg" style="background-image: url('images/hero-slide-2.png')"></div>
-        <div class="cta-section__overlay"></div>
-        <div class="container cta-section__content">
-            <h2 class="cta-section__title">Ready For Your Next Adventure?</h2>
-            <p class="cta-section__text">Let us plan the perfect trip for you. Get in touch today and receive a free
-                personalised itinerary!</p>
-            <div class="cta-section__actions">
-                <a href="tel:+919999999999" class="btn btn--orange">📞 Call Us Now</a>
-                <a href="https://wa.me/919999999999" class="btn btn--outline" target="_blank" rel="noopener">💬 WhatsApp
-                    Us</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== FOOTER ===== -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer__grid">
-                <div class="footer__col">
-                    <div class="footer__brand">
-                        <span class="navbar__logo-we">WE</span>
-                        <span class="navbar__logo-plan">PLAN</span>
-                        <span class="navbar__logo-trips">TRIPS</span>
-                    </div>
-                    <p class="footer__about">Your trusted partner for unforgettable travel experiences. We turn your
-                        travel dreams into reality with curated itineraries and premium service.</p>
-                    <div class="footer__socials">
-                        <a href="#" aria-label="Facebook" class="footer__social">📘</a>
-                        <a href="#" aria-label="Instagram" class="footer__social">📸</a>
-                        <a href="#" aria-label="Twitter" class="footer__social">🐦</a>
-                        <a href="#" aria-label="YouTube" class="footer__social">🎬</a>
-                    </div>
-                </div>
-                <div class="footer__col">
-                    <h4 class="footer__heading">Quick Links</h4>
-                    <ul class="footer__links">
-                        <li><a href="#hero">Home</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#destinations">Destinations</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#testimonials">Testimonials</a></li>
-                    </ul>
-                </div>
-                <div class="footer__col">
-                    <h4 class="footer__heading">Top Destinations</h4>
-                    <ul class="footer__links">
-                        <li><a href="#">Bali, Indonesia</a></li>
-                        <li><a href="#">Maldives</a></li>
-                        <li><a href="#">Dubai, UAE</a></li>
-                        <li><a href="#">Kashmir, India</a></li>
-                        <li><a href="#">Switzerland</a></li>
-                    </ul>
-                </div>
-                <div class="footer__col">
-                    <h4 class="footer__heading">Contact Us</h4>
-                    <ul class="footer__contact">
-                        <li>📞 +91 99999 99999</li>
-                        <li>✉️ info@weplantrips.com</li>
-                        <li>📍 Your City, India</li>
-                        <li>🕐 Mon – Sat: 10 AM – 7 PM</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer__bottom">
-                <p>&copy; 2025 WE PLAN TRIPS. All Rights Reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+        <script src="script.js"></script>
 </body>
 
 </html>

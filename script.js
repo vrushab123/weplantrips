@@ -4,8 +4,21 @@
 
 (function () {
     'use strict';
-
     // ================================================================
+    // PAGE LOADER
+    // ================================================================
+    var loader = document.getElementById('page-loader');
+    if (loader) {
+        var isFirstVisit = !sessionStorage.getItem('wpt_visited');
+        var loaderDelay = isFirstVisit ? 2200 : 800;
+
+        window.addEventListener('load', function () {
+            setTimeout(function () {
+                loader.classList.add('hidden');
+                sessionStorage.setItem('wpt_visited', '1');
+            }, loaderDelay);
+        });
+    }
     // HERO SLIDER
     // ================================================================
     const slides = document.querySelectorAll('.hero__slide');
@@ -15,7 +28,7 @@
 
     let current = 0;
     const total = slides.length;
-    const INTERVAL = 5000;
+    const INTERVAL = 3500;
     let timer = null;
     let touchStartX = 0;
     let touchEndX = 0;
@@ -125,6 +138,163 @@
             menu.classList.remove('open');
         }
     });
+
+    // ================================================================
+    // DESTINATIONS CAROUSEL — Center-Focused with Drag Support
+    // ================================================================
+    const destCarousel = document.getElementById('dest-carousel');
+    const destTrack = document.getElementById('dest-carousel-track');
+    const destCards = document.querySelectorAll('.dest-ccard');
+
+    if (destCarousel && destTrack && destCards.length > 0) {
+        let destCurrentIndex = 0;
+        let destAutoPlayTimer = null;
+        const DEST_AUTO_PLAY_INTERVAL = 4500;
+
+        // Dragging state
+        let isDragging = false;
+        let startX = 0;
+        let currentTranslate = 0;
+        let prevTranslate = 0;
+        let animationID = 0;
+
+        function updateDestCarousel(withTransition = true) {
+            destCards.forEach(card => card.classList.remove('active'));
+            const activeCard = destCards[destCurrentIndex];
+            activeCard.classList.add('active');
+
+            const containerWidth = destCarousel.offsetWidth;
+            const cardWidth = activeCard.offsetWidth;
+            const cardOffset = activeCard.offsetLeft;
+
+            const targetTranslate = (containerWidth / 2) - (cardOffset + (cardWidth / 2));
+
+            if (withTransition) {
+                destTrack.style.transition = 'transform 0.7s cubic-bezier(0.2, 1, 0.3, 1)';
+            } else {
+                destTrack.style.transition = 'none';
+            }
+
+            destTrack.style.transform = `translateX(${targetTranslate}px)`;
+            currentTranslate = targetTranslate;
+            prevTranslate = targetTranslate;
+        }
+
+        function nextDestImage() {
+            destCurrentIndex = (destCurrentIndex + 1) % destCards.length;
+            updateDestCarousel();
+        }
+
+        function startDestAutoPlay() {
+            stopDestAutoPlay();
+            destAutoPlayTimer = setInterval(nextDestImage, DEST_AUTO_PLAY_INTERVAL);
+        }
+
+        function stopDestAutoPlay() {
+            if (destAutoPlayTimer) {
+                clearInterval(destAutoPlayTimer);
+                destAutoPlayTimer = null;
+            }
+        }
+
+        // Drag/Swipe Logic
+        function dragStart(e) {
+            isDragging = true;
+            startX = getPositionX(e);
+            stopDestAutoPlay();
+            destTrack.style.transition = 'none';
+            destCarousel.classList.add('dragging');
+        }
+
+        function dragMove(e) {
+            if (!isDragging) return;
+            const currentX = getPositionX(e);
+            const diff = currentX - startX;
+            const translate = prevTranslate + diff;
+            destTrack.style.transform = `translateX(${translate}px)`;
+            currentTranslate = translate;
+        }
+
+        function dragEnd() {
+            if (!isDragging) return;
+            isDragging = false;
+            destCarousel.classList.remove('dragging');
+
+            // Calculate which card is closest to the center
+            const containerCenter = destCarousel.offsetWidth / 2;
+            let closestIndex = 0;
+            let minDistance = Infinity;
+
+            destCards.forEach((card, index) => {
+                const cardRect = card.getBoundingClientRect();
+                const cardCenter = cardRect.left + (cardRect.width / 2);
+                const distance = Math.abs(containerCenter - cardCenter);
+                if (distance < minDistance) {
+                    minDistance = distance;
+                    closestIndex = index;
+                }
+            });
+
+            destCurrentIndex = closestIndex;
+            updateDestCarousel(true);
+            startDestAutoPlay();
+        }
+
+        function getPositionX(e) {
+            return e.type.includes('mouse') ? e.pageX : e.touches[0].clientX;
+        }
+
+        // Event Listeners
+        destCards.forEach((card, index) => {
+            card.addEventListener('click', (e) => {
+                if (index !== destCurrentIndex) {
+                    e.preventDefault();
+                    destCurrentIndex = index;
+                    updateDestCarousel();
+                    startDestAutoPlay();
+                }
+            });
+        });
+
+        // Mouse Events
+        destTrack.addEventListener('mousedown', dragStart);
+        window.addEventListener('mousemove', dragMove);
+        window.addEventListener('mouseup', dragEnd);
+
+        // Touch Events
+        destTrack.addEventListener('touchstart', dragStart, { passive: true });
+        window.addEventListener('touchmove', dragMove, { passive: false });
+        window.addEventListener('touchend', dragEnd);
+
+        // Prevent ghost clicks/drags on images
+        destTrack.addEventListener('dragstart', (e) => e.preventDefault());
+
+        // Initialize
+        function initDestCarousel() {
+            setTimeout(() => {
+                updateDestCarousel(false);
+                startDestAutoPlay();
+            }, 100);
+        }
+
+        if (document.readyState === 'complete') {
+            initDestCarousel();
+        } else {
+            window.addEventListener('load', initDestCarousel);
+        }
+
+        window.addEventListener('resize', () => updateDestCarousel(false));
+
+        destCarousel.addEventListener('mouseenter', stopDestAutoPlay);
+        destCarousel.addEventListener('mouseleave', () => {
+            if (!isDragging) startDestAutoPlay();
+        });
+
+        document.addEventListener('visibilitychange', () => {
+            if (document.hidden) stopDestAutoPlay();
+            else startDestAutoPlay();
+        });
+    }
 
     // ================================================================
     // STATS COUNTER ANIMATION
