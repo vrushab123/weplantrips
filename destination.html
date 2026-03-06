@@ -1,0 +1,193 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tour packages by WE PLAN TRIPS.">
+    <title>Destination — WE PLAN TRIPS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="destinations.css">
+    <style>
+        /* Coming-soon state for Russia & future destinations */
+        .pkg-coming-soon {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 5rem 2rem;
+            background: rgba(var(--primary-rgb, 212, 175, 55), 0.06);
+            border: 2px dashed rgba(212, 175, 55, 0.35);
+            border-radius: 20px;
+        }
+
+        .pkg-coming-soon__icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .pkg-coming-soon h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--dark-color, #111);
+        }
+
+        .pkg-coming-soon p {
+            color: #666;
+            max-width: 500px;
+            margin: 0 auto 2rem;
+            line-height: 1.7;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            padding: 0.9rem 2.2rem;
+            background: linear-gradient(135deg, #d4af37, #f5d97c);
+            color: #111;
+            font-weight: 700;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="loader" id="page-loader">
+        <div class="loader__content">
+            <div class="loader__plane">✈</div>
+            <div class="loader__brand"><img src="assets/logo.png" alt="WE PLAN TRIPS" class="loader__logo-img"></div>
+            <div class="loader__bar">
+                <div class="loader__bar-fill"></div>
+            </div>
+            <p class="loader__text">Planning your experience...</p>
+        </div>
+    </div>
+
+    <nav class="navbar scrolled" id="navbar">
+        <div class="navbar__container">
+            <a href="index.html" class="navbar__logo"><img src="assets/logo.png" alt="WE PLAN TRIPS" class="navbar__logo-img"></a>
+            <ul class="navbar__menu" id="navbar-menu">
+                <li><a href="index.html" class="navbar__link">Home</a></li>
+                <li><a href="about.html" class="navbar__link">About</a></li>
+                <li><a href="destinations.html" class="navbar__link active">Destinations</a></li>
+                <li><a href="index.html#services" class="navbar__link">Services</a></li>
+                <li><a href="index.html#testimonials" class="navbar__link">Testimonials</a></li>
+                <li><a href="index.html#contact" class="navbar__link navbar__link--cta">Contact Us</a></li>
+            </ul>
+            <button class="navbar__toggle" id="navbar-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero — populated by destination.js -->
+    <section class="page-hero">
+        <div class="page-hero__bg"></div>
+        <div class="page-hero__content">
+            <p class="page-hero__label">Loading...</p>
+            <h1 class="page-hero__title">Destination</h1>
+            <p class="page-hero__subtitle"></p>
+        </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <div class="breadcrumb__list">
+                <a href="index.html">Home</a>
+                <span class="breadcrumb__sep">›</span>
+                <a href="destinations.html">Destinations</a>
+                <span class="breadcrumb__sep">›</span>
+                <span class="breadcrumb__current">Destination</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Overview — populated by destination.js -->
+    <section class="dest-overview">
+        <div class="container">
+            <div class="dest-overview__grid">
+                <div>
+                    <h2 class="dest-overview__title">Explore <span>Destination</span></h2>
+                    <p class="dest-overview__text"></p>
+                    <div class="dest-overview__highlights"></div>
+                </div>
+                <img src="" alt="" class="dest-overview__img">
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages — populated by destination.js -->
+    <section class="tour-packages">
+        <div class="container">
+            <p class="section-label">Tour Packages</p>
+            <h2 class="section-title section-title--center">Destination <span>Packages</span></h2>
+            <p class="section-subtitle"></p>
+            <!-- Cards injected here -->
+            <div class="tour-packages__grid"></div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__col">
+                    <div class="footer__brand"><img src="assets/logo.png" alt="WE PLAN TRIPS" class="footer__logo-img"></div>
+                    <p class="footer__about">Your trusted partner for unforgettable travel experiences.</p>
+                    <div class="footer__socials">
+                        <a href="#" class="footer__social">📘</a>
+                        <a href="#" class="footer__social">📸</a>
+                        <a href="#" class="footer__social">🐦</a>
+                        <a href="#" class="footer__social">🎬</a>
+                    </div>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__heading">Quick Links</h4>
+                    <ul class="footer__links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__heading">Top Destinations</h4>
+                    <ul class="footer__links">
+                        <li><a href="destination.html?dest=bali">Bali</a></li>
+                        <li><a href="destination.html?dest=dubai">Dubai</a></li>
+                        <li><a href="destination.html?dest=japan">Japan</a></li>
+                        <li><a href="destination.html?dest=greece">Greece</a></li>
+                        <li><a href="destination.html?dest=switzerland">Switzerland</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__heading">Contact Us</h4>
+                    <ul class="footer__contact">
+                        <li>📞 +91 99999 99999</li>
+                        <li>✉️ info@weplantrips.com</li>
+                        <li>📍 Your City, India</li>
+                        <li>🕐 Mon – Sat: 10 AM – 7 PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2025 WE PLAN TRIPS. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="destination.js"></script>
+</body>
+
+</html>

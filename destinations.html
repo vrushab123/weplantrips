@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -22,8 +22,7 @@
     <div class="loader" id="page-loader">
         <div class="loader__content">
             <div class="loader__plane">✈</div>
-            <div class="loader__brand"><span class="loader__we">WE</span><span class="loader__plan">PLAN</span><span
-                    class="loader__trips">TRIPS</span></div>
+            <div class="loader__brand"><img src="assets/logo.png" alt="WE PLAN TRIPS" class="loader__logo-img"></div>
             <div class="loader__bar">
                 <div class="loader__bar-fill"></div>
             </div>
@@ -34,11 +33,11 @@
     <!-- NAVBAR -->
     <nav class="navbar scrolled" id="navbar">
         <div class="navbar__container">
-            <a href="index.html" class="navbar__logo"><span class="navbar__logo-we">WE</span><span
-                    class="navbar__logo-plan">PLAN</span><span class="navbar__logo-trips">TRIPS</span></a>
+            <a href="index.html" class="navbar__logo"><img src="assets/logo.png" alt="WE PLAN TRIPS"
+                    class="navbar__logo-img"></a>
             <ul class="navbar__menu" id="navbar-menu">
                 <li><a href="index.html" class="navbar__link">Home</a></li>
-                <li><a href="index.html#about" class="navbar__link">About</a></li>
+                <li><a href="about.html" class="navbar__link">About</a></li>
                 <li><a href="destinations.html" class="navbar__link active">Destinations</a></li>
                 <li><a href="index.html#services" class="navbar__link">Services</a></li>
                 <li><a href="index.html#testimonials" class="navbar__link">Testimonials</a></li>
@@ -76,102 +75,162 @@
         <div class="container">
             <div class="dest-listing__grid">
 
-                <a href="destination-bali.html" class="dest-listing-card">
+                <a href="destination.html?dest=almaty" class="dest-listing-card">
+                    <img src="images/dest-almaty.png" alt="Almaty, Kazakhstan" class="dest-listing-card__img">
+                    <div class="dest-listing-card__overlay">
+                        <span class="dest-listing-card__country">Kazakhstan</span>
+                        <h3 class="dest-listing-card__name">Almaty</h3>
+                        <p class="dest-listing-card__price">6 Packages Available</p>
+                    </div>
+                    <div class="dest-listing-card__arrow">→</div>
+                </a>
+
+                <a href="destination.html?dest=bali" class="dest-listing-card">
                     <img src="images/dest-bali.png" alt="Bali, Indonesia" class="dest-listing-card__img">
                     <div class="dest-listing-card__overlay">
                         <span class="dest-listing-card__country">Indonesia</span>
                         <h3 class="dest-listing-card__name">Bali</h3>
-                        <p class="dest-listing-card__price">Starting from <span>₹45,000</span></p>
+                        <p class="dest-listing-card__price">8 Packages Available</p>
                     </div>
                     <div class="dest-listing-card__arrow">→</div>
                 </a>
 
-                <a href="destination-thailand.html" class="dest-listing-card">
-                    <img src="images/dest-thailand.png" alt="Thailand" class="dest-listing-card__img">
-                    <div class="dest-listing-card__overlay">
-                        <span class="dest-listing-card__country">Thailand</span>
-                        <h3 class="dest-listing-card__name">Thailand</h3>
-                        <p class="dest-listing-card__price">Starting from <span>₹35,000</span></p>
-                    </div>
-                    <div class="dest-listing-card__arrow">→</div>
-                </a>
-
-                <a href="destination-maldives.html" class="dest-listing-card">
-                    <img src="images/dest-maldives.png" alt="Maldives" class="dest-listing-card__img">
-                    <div class="dest-listing-card__overlay">
-                        <span class="dest-listing-card__country">Maldives</span>
-                        <h3 class="dest-listing-card__name">Maldives</h3>
-                        <p class="dest-listing-card__price">Starting from <span>₹70,000</span></p>
-                    </div>
-                    <div class="dest-listing-card__arrow">→</div>
-                </a>
-
-                <a href="destination-dubai.html" class="dest-listing-card">
+                <a href="destination.html?dest=dubai" class="dest-listing-card">
                     <img src="images/dest-dubai.png" alt="Dubai, UAE" class="dest-listing-card__img">
                     <div class="dest-listing-card__overlay">
                         <span class="dest-listing-card__country">UAE</span>
                         <h3 class="dest-listing-card__name">Dubai</h3>
-                        <p class="dest-listing-card__price">Starting from <span>₹60,000</span></p>
+                        <p class="dest-listing-card__price">8 Packages Available</p>
                     </div>
                     <div class="dest-listing-card__arrow">→</div>
                 </a>
 
-                <a href="destination-kashmir.html" class="dest-listing-card">
-                    <img src="images/dest-kashmir.png" alt="Kashmir, India" class="dest-listing-card__img">
+                <a href="destination.html?dest=northern-lights" class="dest-listing-card">
+                    <img src="images/dest-northern-lights.png" alt="Northern Lights" class="dest-listing-card__img">
                     <div class="dest-listing-card__overlay">
-                        <span class="dest-listing-card__country">India</span>
-                        <h3 class="dest-listing-card__name">Kashmir</h3>
-                        <p class="dest-listing-card__price">Starting from <span>₹25,000</span></p>
+                        <span class="dest-listing-card__country">Finland / Norway / Iceland</span>
+                        <h3 class="dest-listing-card__name">Northern Lights</h3>
+                        <p class="dest-listing-card__price">6 Packages Available</p>
                     </div>
                     <div class="dest-listing-card__arrow">→</div>
                 </a>
 
-                <a href="destination-goa.html" class="dest-listing-card">
-                    <img src="images/dest-goa.png" alt="Goa, India" class="dest-listing-card__img">
+                <a href="destination.html?dest=hongkong" class="dest-listing-card">
+                    <img src="images/dest-hongkong.png" alt="Hong Kong" class="dest-listing-card__img">
                     <div class="dest-listing-card__overlay">
-                        <span class="dest-listing-card__country">India</span>
-                        <h3 class="dest-listing-card__name">Goa</h3>
-                        <p class="dest-listing-card__price">Starting from <span>₹15,000</span></p>
+                        <span class="dest-listing-card__country">Asia</span>
+                        <h3 class="dest-listing-card__name">Hong Kong</h3>
+                        <p class="dest-listing-card__price">2 Packages Available</p>
                     </div>
                     <div class="dest-listing-card__arrow">→</div>
                 </a>
 
-                <a href="destination-switzerland.html" class="dest-listing-card">
-                    <img src="images/dest-switzerland.png" alt="Switzerland" class="dest-listing-card__img">
+                <a href="destination.html?dest=japan" class="dest-listing-card">
+                    <img src="images/dest-japan.png" alt="Japan" class="dest-listing-card__img">
                     <div class="dest-listing-card__overlay">
-                        <span class="dest-listing-card__country">Europe</span>
-                        <h3 class="dest-listing-card__name">Switzerland</h3>
-                        <p class="dest-listing-card__price">Starting from <span>₹1,20,000</span></p>
+                        <span class="dest-listing-card__country">Asia</span>
+                        <h3 class="dest-listing-card__name">Japan</h3>
+                        <p class="dest-listing-card__price">6 Packages Available</p>
                     </div>
                     <div class="dest-listing-card__arrow">→</div>
                 </a>
 
-                <a href="destination-paris.html" class="dest-listing-card">
-                    <img src="images/dest-paris.png" alt="Paris, France" class="dest-listing-card__img">
+                <a href="destination.html?dest=malaysia" class="dest-listing-card">
+                    <img src="images/dest-malaysia.png" alt="Malaysia" class="dest-listing-card__img">
                     <div class="dest-listing-card__overlay">
-                        <span class="dest-listing-card__country">France</span>
-                        <h3 class="dest-listing-card__name">Paris</h3>
-                        <p class="dest-listing-card__price">Starting from <span>₹85,000</span></p>
+                        <span class="dest-listing-card__country">Asia</span>
+                        <h3 class="dest-listing-card__name">Malaysia</h3>
+                        <p class="dest-listing-card__price">5 Packages Available</p>
                     </div>
                     <div class="dest-listing-card__arrow">→</div>
                 </a>
 
-                <a href="destination-singapore.html" class="dest-listing-card">
+                <a href="destination.html?dest=singapore" class="dest-listing-card">
                     <img src="images/dest-singapore.png" alt="Singapore" class="dest-listing-card__img">
                     <div class="dest-listing-card__overlay">
                         <span class="dest-listing-card__country">Asia</span>
                         <h3 class="dest-listing-card__name">Singapore</h3>
-                        <p class="dest-listing-card__price">Starting from <span>₹55,000</span></p>
+                        <p class="dest-listing-card__price">6 Packages Available</p>
                     </div>
                     <div class="dest-listing-card__arrow">→</div>
                 </a>
 
-                <a href="destination-manali.html" class="dest-listing-card">
-                    <img src="images/dest-manali.png" alt="Manali, India" class="dest-listing-card__img">
+                <a href="destination.html?dest=greece" class="dest-listing-card">
+                    <img src="images/dest-greece.png" alt="Greece" class="dest-listing-card__img">
                     <div class="dest-listing-card__overlay">
-                        <span class="dest-listing-card__country">India</span>
-                        <h3 class="dest-listing-card__name">Manali</h3>
-                        <p class="dest-listing-card__price">Starting from <span>₹18,000</span></p>
+                        <span class="dest-listing-card__country">Europe</span>
+                        <h3 class="dest-listing-card__name">Greece</h3>
+                        <p class="dest-listing-card__price">7 Packages Available</p>
+                    </div>
+                    <div class="dest-listing-card__arrow">→</div>
+                </a>
+
+                <a href="destination.html?dest=europe" class="dest-listing-card">
+                    <img src="images/dest-paris.png" alt="Paris, Europe" class="dest-listing-card__img">
+                    <div class="dest-listing-card__overlay">
+                        <span class="dest-listing-card__country">Europe</span>
+                        <h3 class="dest-listing-card__name">Paris</h3>
+                        <p class="dest-listing-card__price">22 Packages Available</p>
+                    </div>
+                    <div class="dest-listing-card__arrow">→</div>
+                </a>
+
+                <a href="destination.html?dest=switzerland" class="dest-listing-card">
+                    <img src="images/dest-switzerland.png" alt="Switzerland" class="dest-listing-card__img">
+                    <div class="dest-listing-card__overlay">
+                        <span class="dest-listing-card__country">Europe</span>
+                        <h3 class="dest-listing-card__name">Switzerland</h3>
+                        <p class="dest-listing-card__price">6 Packages Available</p>
+                    </div>
+                    <div class="dest-listing-card__arrow">→</div>
+                </a>
+
+                <a href="destination.html?dest=russia" class="dest-listing-card">
+                    <img src="images/dest-russia.png" alt="Russia" class="dest-listing-card__img">
+                    <div class="dest-listing-card__overlay">
+                        <span class="dest-listing-card__country">Europe / Asia</span>
+                        <h3 class="dest-listing-card__name">Russia</h3>
+                        <p class="dest-listing-card__price">Packages Coming Soon</p>
+                    </div>
+                    <div class="dest-listing-card__arrow">→</div>
+                </a>
+
+                <a href="destination.html?dest=mauritius" class="dest-listing-card">
+                    <img src="images/dest-mauritius.png" alt="Mauritius" class="dest-listing-card__img">
+                    <div class="dest-listing-card__overlay">
+                        <span class="dest-listing-card__country">Africa</span>
+                        <h3 class="dest-listing-card__name">Mauritius</h3>
+                        <p class="dest-listing-card__price">4 Packages Available</p>
+                    </div>
+                    <div class="dest-listing-card__arrow">→</div>
+                </a>
+
+                <a href="destination.html?dest=thailand" class="dest-listing-card">
+                    <img src="images/dest-thailand.png" alt="Thailand" class="dest-listing-card__img">
+                    <div class="dest-listing-card__overlay">
+                        <span class="dest-listing-card__country">Asia</span>
+                        <h3 class="dest-listing-card__name">Thailand</h3>
+                        <p class="dest-listing-card__price">8 Packages Available</p>
+                    </div>
+                    <div class="dest-listing-card__arrow">→</div>
+                </a>
+
+                <a href="destination.html?dest=turkey" class="dest-listing-card">
+                    <img src="images/dest-turkey.png" alt="Turkey" class="dest-listing-card__img">
+                    <div class="dest-listing-card__overlay">
+                        <span class="dest-listing-card__country">Europe / Asia</span>
+                        <h3 class="dest-listing-card__name">Turkey</h3>
+                        <p class="dest-listing-card__price">5 Packages Available</p>
+                    </div>
+                    <div class="dest-listing-card__arrow">→</div>
+                </a>
+
+                <a href="destination.html?dest=vietnam" class="dest-listing-card">
+                    <img src="images/dest-vietnam.png" alt="Vietnam" class="dest-listing-card__img">
+                    <div class="dest-listing-card__overlay">
+                        <span class="dest-listing-card__country">Asia</span>
+                        <h3 class="dest-listing-card__name">Vietnam</h3>
+                        <p class="dest-listing-card__price">6 Packages Available</p>
                     </div>
                     <div class="dest-listing-card__arrow">→</div>
                 </a>
@@ -185,8 +244,8 @@
         <div class="container">
             <div class="footer__grid">
                 <div class="footer__col">
-                    <div class="footer__brand"><span class="navbar__logo-we">WE</span><span
-                            class="navbar__logo-plan">PLAN</span><span class="navbar__logo-trips">TRIPS</span></div>
+                    <div class="footer__brand"><img src="assets/logo.png" alt="WE PLAN TRIPS" class="footer__logo-img">
+                    </div>
                     <p class="footer__about">Your trusted partner for unforgettable travel experiences. We turn your
                         travel dreams into reality with curated itineraries and premium service.</p>
                     <div class="footer__socials"><a href="#" class="footer__social">📘</a><a href="#"
@@ -197,7 +256,7 @@
                     <h4 class="footer__heading">Quick Links</h4>
                     <ul class="footer__links">
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="about.html">About Us</a></li>
                         <li><a href="destinations.html">Destinations</a></li>
                         <li><a href="index.html#services">Services</a></li>
                         <li><a href="index.html#testimonials">Testimonials</a></li>
@@ -206,11 +265,11 @@
                 <div class="footer__col">
                     <h4 class="footer__heading">Top Destinations</h4>
                     <ul class="footer__links">
-                        <li><a href="destination-bali.html">Bali, Indonesia</a></li>
-                        <li><a href="destination-maldives.html">Maldives</a></li>
-                        <li><a href="destination-dubai.html">Dubai, UAE</a></li>
-                        <li><a href="destination-kashmir.html">Kashmir, India</a></li>
-                        <li><a href="destination-switzerland.html">Switzerland</a></li>
+                        <li><a href="destination.html?dest=bali">Bali, Indonesia</a></li>
+                        <li><a href="destination.html?dest=dubai">Dubai, UAE</a></li>
+                        <li><a href="destination.html?dest=japan">Japan</a></li>
+                        <li><a href="destination.html?dest=greece">Greece</a></li>
+                        <li><a href="destination.html?dest=switzerland">Switzerland</a></li>
                     </ul>
                 </div>
                 <div class="footer__col">

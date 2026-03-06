@@ -1,0 +1,284 @@
+{
+  "destinations": [
+    {
+      "id": "almaty",
+      "name": "Almaty",
+      "country": "Kazakhstan",
+      "subtitle": "Where city charm meets mountain grandeur",
+      "description": "Almaty, Kazakhstan's cultural capital, blends glamorous cityscapes with the breathtaking Tian Shan Mountains. Experience snow-capped peaks, crystal-clear Issyk-Kul Lake, dramatic canyons, and vibrant bazaars. A hidden gem for adventurous travellers seeking something truly unique.",
+      "image": "images/dest-almaty.png",
+      "tags": ["Mountains", "Canyons", "Issyk Lake", "Culture", "Skiing"],
+      "packages": [
+        { "name": "A Blend of City Charms and Natural Wonders", "duration": "4 Nights", "highlights": ["City Tour", "Mountains", "Cultural Sites"] },
+        { "name": "Discover Issyk Lake, Canyons, and Cultural Charms", "duration": "4 Nights", "highlights": ["Issyk Lake", "Canyons", "Culture"] },
+        { "name": "A Journey Through Mountains, Culture, and Scenic Wonders", "duration": "5 Nights", "highlights": ["Mountains", "Scenic Views", "Cultural Tour"] },
+        { "name": "From City Charms to Mountain Peaks and Hidden Canyons", "duration": "5 Nights", "highlights": ["City", "Mountain Peaks", "Hidden Canyons"] },
+        { "name": "Unveiling City Charms, Canyons, and Scenic Escapes", "duration": "6 Nights", "highlights": ["5-Star Hotels", "Canyons", "Scenic Escapes"] },
+        { "name": "From Shymbulak Peaks to Canyons and Lakes", "duration": "6 Nights", "highlights": ["Shymbulak", "Canyons", "Tenir Eco Stay"] }
+      ]
+    },
+    {
+      "id": "bali",
+      "name": "Bali",
+      "country": "Indonesia",
+      "subtitle": "The Island of the Gods — romance, culture and tropical bliss",
+      "description": "Bali, the Island of the Gods, beckons with its lush rice terraces, ancient temples, vibrant arts scene, and world-class surfing. Whether you seek a romantic getaway, a cultural retreat, or an adventure-packed holiday — Bali delivers an unforgettable experience at every turn.",
+      "image": "images/dest-bali.png",
+      "tags": ["Beaches", "Temples", "Rice Terraces", "Nusa Penida", "Uluwatu"],
+      "packages": [
+        { "name": "Romantic Bali Escape | Ubud Culture & Private Candlelight Evening", "duration": "5N / 6D", "highlights": ["Ubud Culture", "Candlelight Evening", "Romance"] },
+        { "name": "Serene Bali Escape | Love, Luxury & Adventure", "duration": "5N / 6D", "highlights": ["Luxury Stay", "Adventure", "Romance"] },
+        { "name": "Island Romance in Bali | Traditions & Tropical Shores", "duration": "6N / 7D", "highlights": ["Kuta (3D)", "Ubud (4D)", "Tropical Shores"] },
+        { "name": "Serene Bali Getaway | A Honeymooners Delight", "duration": "6N / 7D", "highlights": ["Seminyak (3D)", "Kuta (4D)", "Honeymoon Special"] },
+        { "name": "Nusa Penida Getaway | Scenic Peaks & Ocean Wonders", "duration": "6N / 7D", "highlights": ["Nusa Penida (1D)", "Kuta (6D)", "Ocean Views"] },
+        { "name": "Bali Horizon Escape | Culture, Cliffs & Crystal Waters", "duration": "6N / 7D", "highlights": ["Kuta (2N)", "Nusa Penida (2N)", "Ubud (2N)"] },
+        { "name": "Romantic Bali Escape | Uluwatu, Nusa Penida & Ubud", "duration": "6N / 7D", "highlights": ["Kuta (3D)", "Ubud (4D)", "Uluwatu Cliffs"] },
+        { "name": "Romantic Bali Escape | Nusa Penida & Waterfalls", "duration": "6N / 7D", "highlights": ["Seminyak (3D)", "Ubud (4D)", "Waterfalls"] }
+      ]
+    },
+    {
+      "id": "dubai",
+      "name": "Dubai",
+      "country": "UAE",
+      "subtitle": "Where luxury meets the desert — the city of gold",
+      "description": "Dubai is a city of superlatives — the world's tallest building, the largest mall, and the most luxurious hotels. From thrilling desert dune bashing to dazzling dinner cruises on the Dubai Marina, from the gold souk to Abu Dhabi's grand mosque — Dubai is an extraordinary experience.",
+      "image": "images/dest-dubai.png",
+      "tags": ["Burj Khalifa", "Desert Safari", "Dubai Marina", "Abu Dhabi", "Gold Souk"],
+      "packages": [
+        { "name": "Glamorous Dubai Escape | City Highlights & Luxury Cruise", "duration": "4N / 5D", "highlights": ["City Highlights", "Luxury Cruise", "Iconic Sights"] },
+        { "name": "Love in Dubai | Resort Luxury & Complimentary Park Experiences", "duration": "4N / 5D", "highlights": ["Resort Luxury", "Theme Parks", "Romantic"] },
+        { "name": "Arabian Honeymoon Bliss | Desert Dunes & Iconic Views", "duration": "5N / 6D", "highlights": ["Desert Safari", "Honeymoon", "Iconic Views"] },
+        { "name": "Luxury Dubai | Burj Khalifa & Marina Nights", "duration": "5N / 6D", "highlights": ["Burj Khalifa", "Marina Nights", "5-Star Experience"] },
+        { "name": "Dubai Romance Collection | Luxury Living & Intimate Experiences", "duration": "5N / 6D", "highlights": ["Luxury Living", "Intimate Moments", "Couple Package"] },
+        { "name": "Dubai–Abu Dhabi Love Trail | City Lights & Golden Dunes", "duration": "7N / 8D", "highlights": ["Dubai", "Abu Dhabi", "Golden Dunes"] },
+        { "name": "Arabian Nights for Two | Dubai Honeymoon Bliss", "duration": "6N / 7D", "highlights": ["Honeymoon", "Arabian Nights", "Desert Experience"] },
+        { "name": "Dubai Highlights | With Abu Dhabi Tour", "duration": "5N / 6D", "highlights": ["Dubai Highlights", "Abu Dhabi Day Tour", "Sheikh Zayed Mosque"] }
+      ]
+    },
+    {
+      "id": "northern-lights",
+      "name": "Northern Lights",
+      "country": "Finland · Norway · Iceland",
+      "subtitle": "Chase the Aurora Borealis across Scandinavia",
+      "description": "Witness nature's most spectacular light show — the Aurora Borealis — dancing across Arctic skies in Finland, Norway, and Iceland. From cosy glass igloos to icebreaker cruises, dog sledding to whale watching, these Scandinavian adventures promise memories that last a lifetime.",
+      "image": "images/dest-northern-lights.png",
+      "tags": ["Aurora Borealis", "Ice Hotels", "Fjords", "Dog Sledding", "Whale Watching"],
+      "packages": [
+        { "name": "Scandinavian Splendour | Oslo & Tromsø Discovery", "duration": "6N / 7D", "highlights": ["Oslo (2N)", "Tromsø (4N)", "Northern Lights"] },
+        { "name": "Scandinavian Arctic Bliss | Lights & Fjord Landscapes", "duration": "10N / 11D", "highlights": ["Cruise Itinerary", "Fjords", "Arctic Lights"] },
+        { "name": "Lapland Dreams | Helsinki to Rovaniemi Escape", "duration": "5N / 6D", "highlights": ["Helsinki", "Rovaniemi", "Santa's Village"] },
+        { "name": "Glimpse of Iceland | Golden Circle & Whale Watching", "duration": "5N / 6D", "highlights": ["Golden Circle", "Whale Watching", "Geysers"] },
+        { "name": "Norway Dreams & Northern Lights Magic", "duration": "7N / 8D", "highlights": ["Norway", "Aurora Borealis", "Fjords"] },
+        { "name": "Polar Dreams Finland | Lights, Snow & Icebreaker Cruise", "duration": "5N / 6D", "highlights": ["Finland", "Icebreaker Cruise", "Snow Activities"] }
+      ]
+    },
+    {
+      "id": "hongkong",
+      "name": "Hong Kong",
+      "country": "Asia",
+      "subtitle": "Where East meets West in a dazzling skyline",
+      "description": "Hong Kong is a captivating fusion of East and West — a vertical city of gleaming skyscrapers, harbour cruises, temple markets, and Michelin-starred restaurants. From The Peak's panoramic views to the bustling streets of Mong Kok and the glamour of Macau, Hong Kong is an endlessly fascinating destination.",
+      "image": "images/dest-hongkong.png",
+      "tags": ["Victoria Harbour", "The Peak", "Macau", "Night Markets", "Dim Sum"],
+      "packages": [
+        { "name": "Hong Kong Highlights | Harbour Cruise & Peak Views", "duration": "6N / 7D", "highlights": ["Hong Kong (4N)", "Macau (1N)", "Harbour Cruise"] },
+        { "name": "Hong Kong Grand Luxe Tour | 5 Nights City Escape", "duration": "5N / 6D", "highlights": ["City Escape", "Luxury Stay", "Iconic Sights"] }
+      ]
+    },
+    {
+      "id": "japan",
+      "name": "Japan",
+      "country": "Asia",
+      "subtitle": "From cherry blossoms to neon city lights",
+      "description": "Japan is a mesmerising blend of ancient traditions and futuristic innovation. Walk through serene Kyoto temples, witness the iconic Mount Fuji, explore the neon streets of Tokyo, and savour world-class Japanese cuisine. A destination like no other, Japan promises an unforgettable sensory journey.",
+      "image": "images/dest-japan.png",
+      "tags": ["Tokyo", "Osaka", "Kyoto", "Mount Fuji", "Cherry Blossoms"],
+      "packages": [
+        { "name": "Japan Illuminated | From Tokyo Skylines to Osaka Streets", "duration": "6N / 7D", "highlights": ["Osaka (3D)", "Tokyo (4D)", "Street Food"] },
+        { "name": "Tokyo Signature Journey | 6 Days in the Capital", "duration": "5N / 6D", "highlights": ["Tokyo (6D)", "Shibuya", "Akihabara"] },
+        { "name": "Japan Signature Journey | Urban Spark to Cultural Gold", "duration": "5N / 6D", "highlights": ["Osaka (2D)", "Tokyo (4D)", "Culture"] },
+        { "name": "Japan Unfolded | From Mount Fuji to Kyoto", "duration": "6N / 7D", "highlights": ["Osaka (1D)", "Kyoto (3D)", "Tokyo (3D)"] },
+        { "name": "From Seoul to Tokyo | Towers & Shinkansen Journey", "duration": "7N / 8D", "highlights": ["Seoul (2D)", "Osaka (2D)", "Tokyo (4D)"] },
+        { "name": "Tokyo to Osaka | Icons, Food, and Fuji", "duration": "7N / 8D", "highlights": ["Tokyo (3D)", "Osaka (5D)", "Mount Fuji"] }
+      ]
+    },
+    {
+      "id": "malaysia",
+      "name": "Malaysia",
+      "country": "Asia",
+      "subtitle": "Truly Asia — where culture, nature and modernity unite",
+      "description": "Malaysia is a vibrant tapestry of cultures, cuisines, and landscapes. From the iconic Petronas Twin Towers to pristine Langkawi beaches, colonial Penang streets to dense Borneo rainforests — Malaysia captivates every type of traveller with its incredible diversity and warm hospitality.",
+      "image": "images/dest-malaysia.png",
+      "tags": ["Kuala Lumpur", "Langkawi", "Petronas Towers", "Beaches", "Street Food"],
+      "packages": [
+        { "name": "Charming Malaysia Budget Vacay", "duration": "5N / 6D", "highlights": ["Kuala Lumpur (4D)", "Langkawi (2D)", "Budget Friendly"] },
+        { "name": "Incredible Kuala Lumpur Vacation", "duration": "5N / 6D", "highlights": ["Kuala Lumpur (6D)", "Petronas Towers", "City Tour"] },
+        { "name": "Enchanting Malaysia Escape", "duration": "4N / 5D", "highlights": ["Langkawi (5D)", "Beaches", "Island Life"] },
+        { "name": "Premium Malaysia Getaway", "duration": "6N / 7D", "highlights": ["Kuala Lumpur (4N)", "Langkawi (2N)", "Luxury"] },
+        { "name": "Malaysia Bliss Journey", "duration": "6N / 7D", "highlights": ["Langkawi (3N)", "Kuala Lumpur (3N)", "Twin Destination"] }
+      ]
+    },
+    {
+      "id": "singapore",
+      "name": "Singapore",
+      "country": "Asia",
+      "subtitle": "The Lion City — where futuristic skylines meet tropical gardens",
+      "description": "Singapore is a dazzling city-state that effortlessly blends ultramodern architecture with rich cultural heritage. From the iconic Marina Bay Sands and Gardens by the Bay to Sentosa's beach resorts and Universal Studios — Singapore offers world-class experiences in a compact, vibrant destination.",
+      "image": "images/dest-singapore.png",
+      "tags": ["Marina Bay Sands", "Sentosa", "Universal Studios", "Gardens by the Bay", "Hawker Food"],
+      "packages": [
+        { "name": "Singapore City & Safari | A Twilight Adventure", "duration": "3N / 4D", "highlights": ["Singapore (4D)", "Night Safari", "City Tour"] },
+        { "name": "Singapore Fun Edition | Universal Studios Included", "duration": "4N / 5D", "highlights": ["Singapore (5D)", "Universal Studios", "Sentosa Island"] },
+        { "name": "Twin City Marvels | Singapore & Kuala Lumpur", "duration": "5N / 6D", "highlights": ["Kuala Lumpur (3D)", "Singapore (3D)", "Twin City"] },
+        { "name": "Southeast Asia Trio | Singapore, Langkawi & Kuala Lumpur", "duration": "8N / 9D", "highlights": ["Langkawi (2D)", "KL (3D)", "Singapore (4D)"] },
+        { "name": "Lion City to KL Icons | Cruise & Theme Park Special", "duration": "9N / 10D", "highlights": ["Cruise (2D)", "Singapore (3D)", "KL (5D)"] },
+        { "name": "Singapore & Malaysia | Sentosa City & Highlands", "duration": "6N / 7D", "highlights": ["Singapore (3D)", "KL (4D)", "Sentosa"] }
+      ]
+    },
+    {
+      "id": "greece",
+      "name": "Greece",
+      "country": "Europe",
+      "subtitle": "Ancient mythology, azure waters, and breathtaking sunsets",
+      "description": "Greece enchants with its iconic white-washed villages, sapphire Aegean waters, ancient ruins, and legendary sunsets. From the romance of Santorini to the party vibes of Mykonos and the ancient glory of Athens — Greece is the ultimate Mediterranean escape for every type of traveller.",
+      "image": "images/dest-greece.png",
+      "tags": ["Santorini", "Mykonos", "Athens", "Aegean Sea", "Ancient Ruins"],
+      "packages": [
+        { "name": "Santorini Bliss | Sunsets & Cycladic Charm", "duration": "3N / 4D", "highlights": ["Santorini (4D)", "Sunset Views", "Cycladic Villages"] },
+        { "name": "Classical Circuit | Athens, Mycenae, Olympia & Delphi", "duration": "5N / 6D", "highlights": ["Athens (4D)", "Delphi (1D)", "Olympia (1D)"] },
+        { "name": "Greek Duo | Athens History & Mykonos Nights", "duration": "6N / 7D", "highlights": ["Mykonos (3D)", "Athens (4D)", "Nightlife"] },
+        { "name": "Santorini Dreams | A Greek Island Getaway", "duration": "5N / 6D", "highlights": ["Athens (2D)", "Santorini (4D)", "Island Romance"] },
+        { "name": "Aegean Escape | Mykonos & Santorini Sunsets", "duration": "5N / 6D", "highlights": ["Mykonos (2D)", "Santorini (4D)", "Aegean Sea"] },
+        { "name": "Greek Classics | Athens, Mykonos & Santorini", "duration": "7N / 8D", "highlights": ["Mykonos (2D)", "Santorini (2D)", "Athens (4D)"] },
+        { "name": "Greek Odyssey | Athens, Mykonos & Santorini Escape", "duration": "6N / 7D", "highlights": ["Athens (2D)", "Mykonos (2D)", "Santorini (3D)"] }
+      ]
+    },
+    {
+      "id": "europe",
+      "name": "Paris",
+      "country": "Europe",
+      "subtitle": "Paris · Switzerland · Italy · Amsterdam — the best of Europe",
+      "description": "Europe is a treasure trove of iconic cities, alpine landscapes, and cultural wonders. From the romantic boulevards of Paris to the snow-capped Swiss Alps, the canals of Amsterdam to the ancient ruins of Rome — our Europe packages let you experience the very best of this magnificent continent.",
+      "image": "images/dest-paris.png",
+      "tags": ["Paris", "Switzerland", "Italy", "Amsterdam", "Spain"],
+      "packages": [
+        { "name": "European Grandeur 2025 | From Snowy Alps to City of Love", "duration": "5N / 6D", "highlights": ["Paris (2D)", "Zurich (4D)"] },
+        { "name": "The Swiss Alpine Experience | Ice Peaks & Flowing Falls", "duration": "5N / 6D", "highlights": ["Switzerland (6D)"] },
+        { "name": "City of Love to Dutch Dreams | Paris & Amsterdam", "duration": "5N / 6D", "highlights": ["Amsterdam (3D)", "Paris (3D)"] },
+        { "name": "Timeless Europe | Dutch Cities & Swiss Mountains", "duration": "5N / 6D", "highlights": ["Amsterdam (2D)", "Zurich (4D)"] },
+        { "name": "Swiss Elegance | Mountains, Waterfalls & Cultural Marvels", "duration": "4N / 5D", "highlights": ["Switzerland (5D)"] },
+        { "name": "The Best of Spain | Madrid, Culture & Barcelona Charm", "duration": "7N / 8D", "highlights": ["Barcelona (2D)", "Granada (2D)", "Madrid (2D)", "Seville (2D)"] },
+        { "name": "Colosseum to Canals | A Week in Italy", "duration": "6N / 7D", "highlights": ["Florence (2D)", "Rome (2D)", "Venice (2D)"] },
+        { "name": "French Elegance & Swiss Peaks | A Classic Europe Escape", "duration": "6N / 7D", "highlights": ["Engelberg (2D)", "Zurich (2D)", "Paris (3D)"] },
+        { "name": "Heavenly Switzerland | Alpine Views & Crystal Lakes", "duration": "7N / 8D", "highlights": ["Lucerne (1D)", "Montreux (1D)", "Interlaken (2D)", "Zurich (4D)"] },
+        { "name": "The Grand Europe Trio | Amsterdam, Paris & Switzerland", "duration": "7N / 8D", "highlights": ["Amsterdam (2D)", "Paris (2D)", "Zurich (4D)"] },
+        { "name": "Love in the Alps | A Swiss Honeymoon Retreat", "duration": "5N / 6D", "highlights": ["Interlaken (2D)", "Lucerne (2D)", "Zurich (2D)"] },
+        { "name": "Spanish Flair & Portuguese Soul | A Grand Iberian Tour", "duration": "10N / 11D", "highlights": ["Seville (1D)", "Granada (2D)", "Lisbon (2D)", "Madrid (2D)", "Barcelona (4D)"] },
+        { "name": "Spain Unveiled | Cities, Coastlines & Island Nights", "duration": "9N / 10D", "highlights": ["Ibiza (3D)", "Madrid (3D)", "Barcelona (4D)"] },
+        { "name": "Iberian Panorama | Lisbon, Madrid & Seville Highlights", "duration": "8N / 9D", "highlights": ["Barcelona (2D)", "Madrid (2D)", "Seville (2D)", "Lisbon (3D)"] },
+        { "name": "Mediterranean to Alps | Italy, Switzerland & France Journey", "duration": "9N / 10D", "highlights": ["Florence (1D)", "Venice (1D)", "Rome (2D)", "Zurich (2D)", "Paris (4D)"] },
+        { "name": "Italian Elegance | Vatican Heritage, Tuscan Hills & Venice Canals", "duration": "9N / 10D", "highlights": ["Florence (1D)", "Rome (3D)", "Venice (4D)"] },
+        { "name": "Grand Europe Capitals | Zurich, Amsterdam, Paris & London", "duration": "11N / 12D", "highlights": ["Frankfurt (1D)", "Amsterdam (2D)", "London (2D)", "Paris (3D)", "Zurich (4D)"] },
+        { "name": "Three Jewels of Europe | France, Switzerland & Italy", "duration": "10N / 11D", "highlights": ["Florence (1D)", "Geneva (1D)", "Lucerne (1D)", "Rome (2D)", "Venice (2D)", "Paris (4D)"] },
+        { "name": "Parisian Glamour & Swiss Elegance | A European Escape", "duration": "8N / 9D", "highlights": ["Lucerne (2D)", "Paris (2D)", "Zurich (3D)"] },
+        { "name": "Icons of Europe | Paris, Swiss Alps & Rome", "duration": "10N / 11D", "highlights": ["Italy (3D)", "Paris (3D)", "Switzerland (3D)"] },
+        { "name": "Love in Iberia | Lisbon to Barcelona Journey", "duration": "8N / 9D", "highlights": ["Barcelona (2D)", "Lisbon (2D)", "Seville (2D)"] },
+        { "name": "The Spirit of Spain | Madrid, Seville & Barcelona", "duration": "7N / 8D", "highlights": ["Barcelona (2D)", "Granada (2D)", "Madrid (2D)", "Seville (2D)"] }
+      ]
+    },
+    {
+      "id": "switzerland",
+      "name": "Switzerland",
+      "country": "Europe",
+      "subtitle": "Alpine peaks, pristine lakes and fairytale landscapes",
+      "description": "Switzerland is the quintessential Alpine paradise — a land of majestic snow-capped peaks, crystalline lakes, charming medieval towns, and world-renowned chocolate and watches. From the thrilling Jungfraujoch peak to the serene shores of Lake Geneva and the vibrant streets of Zurich, Switzerland is eternally beautiful.",
+      "image": "images/dest-switzerland.png",
+      "tags": ["Interlaken", "Jungfraujoch", "Zurich", "Lake Geneva", "Alps"],
+      "packages": [
+        { "name": "Classic Swiss Alps | Interlaken, Zurich & Jungfrau", "duration": "6N / 7D", "highlights": ["Zurich (2D)", "Interlaken (5D)", "Jungfraujoch"] },
+        { "name": "Switzerland Honeymoon | Alpine Romance", "duration": "7N / 8D", "highlights": ["Interlaken", "Lucerne", "Alpine Romance"] },
+        { "name": "Swiss Splendour | Paris & Switzerland Combined", "duration": "7N / 8D", "highlights": ["Paris (3D)", "Switzerland (5D)", "Combined Tour"] },
+        { "name": "Best of Europe | Amsterdam, Paris & Swiss Alps", "duration": "10N / 11D", "highlights": ["Amsterdam (3D)", "Paris (3D)", "Switzerland (5D)"] },
+        { "name": "Swiss Valleys Tour | Lucerne, Grindelwald & Mt. Titlis", "duration": "5N / 6D", "highlights": ["Lucerne (3D)", "Grindelwald (3D)", "Mt. Titlis"] },
+        { "name": "Swiss Grand Tour | Zurich, Bern, Lucerne & Geneva", "duration": "8N / 9D", "highlights": ["Zurich (2D)", "Lucerne (3D)", "Geneva (2D)", "Bern (2D)"] }
+      ]
+    },
+    {
+      "id": "russia",
+      "name": "Russia",
+      "country": "Europe / Asia",
+      "subtitle": "Imperial grandeur, onion domes and vast landscapes",
+      "description": "Russia is a land of extraordinary contrasts — from the golden spires of Moscow's Kremlin to the elegant canals of St. Petersburg, from the vast Siberian tundra to the stunning shores of Lake Baikal. Rich in history, culture, art, and architecture, Russia offers a travel experience unlike any other.",
+      "image": "images/dest-russia.png",
+      "tags": ["Moscow", "St. Petersburg", "Kremlin", "Hermitage", "Trans-Siberian"],
+      "packages": []
+    },
+    {
+      "id": "mauritius",
+      "name": "Mauritius",
+      "country": "Africa",
+      "subtitle": "A tropical paradise of turquoise lagoons and lush valleys",
+      "description": "Mauritius is the definition of paradise — a jewel of the Indian Ocean blessed with crystal-clear lagoons, pristine white beaches, lush green valleys, and world-class resorts. Whether you seek romance, adventure, or pure relaxation, this island paradise delivers an unforgettable experience.",
+      "image": "images/dest-mauritius.png",
+      "tags": ["Tropical Beaches", "Coral Reefs", "Waterfalls", "Honeymoon", "Luxury Resorts"],
+      "packages": [
+        { "name": "Love in Paradise | Mauritius Honeymoon Journey", "duration": "4N / 5D", "highlights": ["Mauritius (5D)", "Honeymoon", "Beach Romance"] },
+        { "name": "Tropical Honeymoon | Mauritius Bliss", "duration": "6N / 7D", "highlights": ["Beach Stay", "Candlelit Dinner", "Couple Activities"] },
+        { "name": "Mauritius Magic | Romantic Shores & Valleys", "duration": "5N / 6D", "highlights": ["Romantic", "Valleys", "Ocean Shores"] },
+        { "name": "Mauritius Island Retreat | Relax, Explore & Unwind", "duration": "9N / 10D", "highlights": ["Extended Stay", "Island Exploration", "Full Relaxation"] }
+      ]
+    },
+    {
+      "id": "thailand",
+      "name": "Thailand",
+      "country": "Asia",
+      "subtitle": "Land of Smiles — temples, beaches and tropical adventures",
+      "description": "Thailand is Southeast Asia's most beloved destination — a captivating blend of ornate temples, tropical islands, vibrant street markets, and warm hospitality. From Bangkok's electrifying energy to Phuket's azure waters and Krabi's dramatic limestone cliffs, Thailand enchants every traveller.",
+      "image": "images/dest-thailand.png",
+      "tags": ["Bangkok", "Phuket", "Krabi", "Pattaya", "Koh Samui"],
+      "packages": [
+        { "name": "Vibrant Thailand | Bangkok City & Pattaya Beaches", "duration": "4N / 5D", "highlights": ["Bangkok (2D)", "Pattaya (3D)", "Beaches"] },
+        { "name": "Phuket Wonders | Phi Phi & James Bond", "duration": "4N / 5D", "highlights": ["Phuket (5D)", "Phi Phi Island", "James Bond Island"] },
+        { "name": "Enchanting Thailand | Heritage & Beach Escapes", "duration": "8N / 9D", "highlights": ["Pattaya (2D)", "Bangkok (3D)", "Phuket (4D)"] },
+        { "name": "Pearl of Andaman | Phuket & Krabi Twin Escape", "duration": "6N / 7D", "highlights": ["Phuket (3D)", "Krabi (4D)", "Twin Escape"] },
+        { "name": "Thailand Island Luxe | Marine Park & YONA Beach Club Experience", "duration": "6N / 7D", "highlights": ["Koh Samui (3D)", "Phuket (4D)", "Beach Club"] },
+        { "name": "Hidden Gems of Thailand | Krabi, Phuket & Khao Lak", "duration": "7N / 8D", "highlights": ["Khao Lak (2D)", "Krabi (2D)", "Phuket (4D)"] },
+        { "name": "Romantic Thailand | Krabi, Phi Phi and Phuket", "duration": "6N / 7D", "highlights": ["Phi Phi (1D)", "Krabi (2D)", "Phuket (3D)"] },
+        { "name": "Thailand Explorer | Phuket, Pattaya & Bangkok", "duration": "6N / 7D", "highlights": ["Pattaya (2D)", "Phuket (2D)", "Bangkok (3D)"] }
+      ]
+    },
+    {
+      "id": "turkey",
+      "name": "Turkey",
+      "country": "Europe / Asia",
+      "subtitle": "Where ancient heritage meets turquoise shores",
+      "description": "Turkey is a magnificent bridge between Europe and Asia — a land of fairy-tale Cappadocia valleys, ornate Ottoman palaces, turquoise Mediterranean bays, and vibrant bazaars. From hot-air balloon rides over volcanic landscapes to sailing the Bodrum coast, Turkey is an extraordinary destination.",
+      "image": "images/dest-turkey.png",
+      "tags": ["Istanbul", "Cappadocia", "Antalya", "Bodrum", "Hot Air Balloons"],
+      "packages": [
+        { "name": "The Spirit of Turkey | Heritage & Horizon Views", "duration": "5N / 6D", "highlights": ["Istanbul (2D)", "Antalya (4D)", "Heritage"] },
+        { "name": "Istanbul to Bodrum | Icons, Culture & Turquoise Bays", "duration": "5N / 6D", "highlights": ["Bodrum (3D)", "Istanbul (3D)", "Turquoise Bays"] },
+        { "name": "Two Classics of Turkey | Markets and Marble Ruins", "duration": "4N / 5D", "highlights": ["Istanbul (2D)", "Kusadasi (3D)", "Marble Ruins"] },
+        { "name": "Mystic Turkey | Cappadocia Valleys & Düden Falls", "duration": "6N / 7D", "highlights": ["Cappadocia (2D)", "Istanbul (2D)", "Antalya (3D)"] },
+        { "name": "Love in Turkey | Valleys, Palaces & Islands", "duration": "5N / 6D", "highlights": ["Cappadocia (2D)", "Istanbul (4D)", "Romantic"] }
+      ]
+    },
+    {
+      "id": "vietnam",
+      "name": "Vietnam",
+      "country": "Asia",
+      "subtitle": "Ancient temples, emerald bays and golden coastlines",
+      "description": "Vietnam is a land of extraordinary beauty — from the misty mountains of the north to the golden sands of the south. Cruise through the legendary Halong Bay, explore ancient Hoi An lantern-lit streets, discover Cu Chi tunnels history, and savour the world's finest street food. Vietnam captivates every traveller.",
+      "image": "images/dest-vietnam.png",
+      "tags": ["Halong Bay", "Hanoi", "Hoi An", "Ho Chi Minh", "Danang"],
+      "packages": [
+        { "name": "Enchanting Vietnam | Culture, Temples & Coastlines", "duration": "6N / 7D", "highlights": ["Halong Bay (1D)", "Danang (2D)", "Hanoi (2D)", "Hoi An (2D)"] },
+        { "name": "Vietnam's Golden Route | Cu Chi to Ba Na Hills", "duration": "4N / 5D", "highlights": ["Ho Chi Minh (2D)", "Danang (3D)", "Ba Na Hills"] },
+        { "name": "North Vietnam Discovery | Hanoi & Halong Bay", "duration": "4N / 5D", "highlights": ["Halong Bay (1D)", "Hanoi (4D)", "Bay Cruise"] },
+        { "name": "Culture to Coastlines | Experience Vietnam", "duration": "6N / 7D", "highlights": ["Halong Bay (1D)", "Hanoi (3D)", "Ho Chi Minh (3D)"] },
+        { "name": "Vietnam Unveiled | Ancient Heritage & Natural Beauty", "duration": "7N / 8D", "highlights": ["Halong Bay (1D)", "Danang (2D)", "Hanoi (2D)", "Ho Chi Minh (3D)"] },
+        { "name": "The Best of Vietnam | North to South Experience", "duration": "6N / 7D", "highlights": ["Halong Bay (1D)", "Hanoi (2D)", "Ho Chi Minh (4D)"] }
+      ]
+    }
+  ]
+}

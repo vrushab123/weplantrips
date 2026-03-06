@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -21,11 +21,7 @@
     <div class="loader" id="page-loader">
         <div class="loader__content">
             <div class="loader__plane">✈</div>
-            <div class="loader__brand">
-                <span class="loader__we">WE</span>
-                <span class="loader__plan">PLAN</span>
-                <span class="loader__trips">TRIPS</span>
-            </div>
+            <div class="loader__brand"><img src="assets/logo.png" alt="WE PLAN TRIPS" class="loader__logo-img"></div>
             <div class="loader__bar">
                 <div class="loader__bar-fill"></div>
             </div>
@@ -36,14 +32,11 @@
     <!-- NAVBAR -->
     <nav class="navbar" id="navbar">
         <div class="navbar__container">
-            <a href="#" class="navbar__logo" id="navbar-logo">
-                <span class="navbar__logo-we">WE</span>
-                <span class="navbar__logo-plan">PLAN</span>
-                <span class="navbar__logo-trips">TRIPS</span>
-            </a>
+            <a href="index.html" class="navbar__logo"><img src="assets/logo.png" alt="WE PLAN TRIPS"
+                    class="navbar__logo-img"></a>
             <ul class="navbar__menu" id="navbar-menu">
                 <li><a href="#hero" class="navbar__link active">Home</a></li>
-                <li><a href="#about" class="navbar__link">About</a></li>
+                <li><a href="about.html" class="navbar__link">About</a></li>
                 <li><a href="destinations.html" class="navbar__link">Destinations</a></li>
                 <li><a href="#services" class="navbar__link">Services</a></li>
                 <li><a href="#testimonials" class="navbar__link">Testimonials</a></li>
@@ -164,75 +157,122 @@
             <p class="section-subtitle">Explore our handpicked collection of the world's most stunning destinations</p>
         </div>
         <div class="dest-carousel" id="dest-carousel">
+            <!-- Navigation Buttons -->
+            <button class="dest-carousel__btn dest-carousel__btn--prev" id="dest-prev"
+                aria-label="Previous destination">&#8592;</button>
+            <button class="dest-carousel__btn dest-carousel__btn--next" id="dest-next"
+                aria-label="Next destination">&#8594;</button>
             <div class="dest-carousel__track" id="dest-carousel-track">
-                <a href="destination-bali.html" class="dest-ccard" data-index="0">
+                <a href="destination.html?dest=almaty" class="dest-ccard" data-index="0">
+                    <img src="images/dest-almaty.png" alt="Almaty" class="dest-ccard__img">
+                    <div class="dest-ccard__info">
+                        <h3>Almaty</h3>
+                        <p>6 Packages</p><span class="dest-ccard__btn">View All &rarr;</span>
+                    </div>
+                </a>
+                <a href="destination.html?dest=bali" class="dest-ccard" data-index="1">
                     <img src="images/dest-bali.png" alt="Bali" class="dest-ccard__img">
                     <div class="dest-ccard__info">
                         <h3>Bali</h3>
-                        <p>3 Packages</p><span class="dest-ccard__btn">View All &rarr;</span>
+                        <p>8 Packages</p><span class="dest-ccard__btn">View All &rarr;</span>
                     </div>
                 </a>
-                <a href="destination-thailand.html" class="dest-ccard" data-index="1">
-                    <img src="images/dest-thailand.png" alt="Thailand" class="dest-ccard__img">
-                    <div class="dest-ccard__info">
-                        <h3>Thailand</h3>
-                        <p>3 Packages</p><span class="dest-ccard__btn">View All &rarr;</span>
-                    </div>
-                </a>
-                <a href="destination-maldives.html" class="dest-ccard" data-index="2">
-                    <img src="images/dest-maldives.png" alt="Maldives" class="dest-ccard__img">
-                    <div class="dest-ccard__info">
-                        <h3>Maldives</h3>
-                        <p>3 Packages</p><span class="dest-ccard__btn">View All &rarr;</span>
-                    </div>
-                </a>
-                <a href="destination-dubai.html" class="dest-ccard" data-index="3">
+                <a href="destination.html?dest=dubai" class="dest-ccard" data-index="2">
                     <img src="images/dest-dubai.png" alt="Dubai" class="dest-ccard__img">
                     <div class="dest-ccard__info">
                         <h3>Dubai</h3>
-                        <p>3 Packages</p><span class="dest-ccard__btn">View All &rarr;</span>
+                        <p>8 Packages</p><span class="dest-ccard__btn">View All &rarr;</span>
                     </div>
                 </a>
-                <a href="destination-kashmir.html" class="dest-ccard" data-index="4">
-                    <img src="images/dest-kashmir.png" alt="Kashmir" class="dest-ccard__img">
+                <a href="destination.html?dest=northern-lights" class="dest-ccard" data-index="3">
+                    <img src="images/dest-northern-lights.png" alt="Northern Lights" class="dest-ccard__img">
                     <div class="dest-ccard__info">
-                        <h3>Kashmir</h3>
-                        <p>3 Packages</p><span class="dest-ccard__btn">View All &rarr;</span>
+                        <h3>Northern Lights</h3>
+                        <p>6 Packages</p><span class="dest-ccard__btn">View All &rarr;</span>
                     </div>
                 </a>
-                <a href="destination-goa.html" class="dest-ccard" data-index="5">
-                    <img src="images/dest-goa.png" alt="Goa" class="dest-ccard__img">
+                <a href="destination.html?dest=hongkong" class="dest-ccard" data-index="4">
+                    <img src="images/dest-hongkong.png" alt="Hong Kong" class="dest-ccard__img">
                     <div class="dest-ccard__info">
-                        <h3>Goa</h3>
-                        <p>3 Packages</p><span class="dest-ccard__btn">View All &rarr;</span>
+                        <h3>Hong Kong</h3>
+                        <p>2 Packages</p><span class="dest-ccard__btn">View All &rarr;</span>
                     </div>
                 </a>
-                <a href="destination-switzerland.html" class="dest-ccard" data-index="6">
-                    <img src="images/dest-switzerland.png" alt="Switzerland" class="dest-ccard__img">
+                <a href="destination.html?dest=japan" class="dest-ccard" data-index="5">
+                    <img src="images/dest-japan.png" alt="Japan" class="dest-ccard__img">
                     <div class="dest-ccard__info">
-                        <h3>Switzerland</h3>
-                        <p>3 Packages</p><span class="dest-ccard__btn">View All &rarr;</span>
+                        <h3>Japan</h3>
+                        <p>6 Packages</p><span class="dest-ccard__btn">View All &rarr;</span>
                     </div>
                 </a>
-                <a href="destination-paris.html" class="dest-ccard" data-index="7">
-                    <img src="images/dest-paris.png" alt="Paris" class="dest-ccard__img">
+                <a href="destination.html?dest=malaysia" class="dest-ccard" data-index="6">
+                    <img src="images/dest-malaysia.png" alt="Malaysia" class="dest-ccard__img">
                     <div class="dest-ccard__info">
-                        <h3>Paris</h3>
-                        <p>3 Packages</p><span class="dest-ccard__btn">View All &rarr;</span>
+                        <h3>Malaysia</h3>
+                        <p>5 Packages</p><span class="dest-ccard__btn">View All &rarr;</span>
                     </div>
                 </a>
-                <a href="destination-singapore.html" class="dest-ccard" data-index="8">
+                <a href="destination.html?dest=singapore" class="dest-ccard" data-index="7">
                     <img src="images/dest-singapore.png" alt="Singapore" class="dest-ccard__img">
                     <div class="dest-ccard__info">
                         <h3>Singapore</h3>
-                        <p>3 Packages</p><span class="dest-ccard__btn">View All &rarr;</span>
+                        <p>6 Packages</p><span class="dest-ccard__btn">View All &rarr;</span>
                     </div>
                 </a>
-                <a href="destination-manali.html" class="dest-ccard" data-index="9">
-                    <img src="images/dest-manali.png" alt="Manali" class="dest-ccard__img">
+                <a href="destination.html?dest=greece" class="dest-ccard" data-index="8">
+                    <img src="images/dest-greece.png" alt="Greece" class="dest-ccard__img">
                     <div class="dest-ccard__info">
-                        <h3>Manali</h3>
-                        <p>3 Packages</p><span class="dest-ccard__btn">View All &rarr;</span>
+                        <h3>Greece</h3>
+                        <p>7 Packages</p><span class="dest-ccard__btn">View All &rarr;</span>
+                    </div>
+                </a>
+                <a href="destination.html?dest=europe" class="dest-ccard" data-index="9">
+                    <img src="images/dest-paris.png" alt="Paris" class="dest-ccard__img">
+                    <div class="dest-ccard__info">
+                        <h3>Paris</h3>
+                        <p>8+ Packages</p><span class="dest-ccard__btn">View All &rarr;</span>
+                    </div>
+                </a>
+                <a href="destination.html?dest=switzerland" class="dest-ccard" data-index="10">
+                    <img src="images/dest-switzerland.png" alt="Switzerland" class="dest-ccard__img">
+                    <div class="dest-ccard__info">
+                        <h3>Switzerland</h3>
+                        <p>8+ Packages</p><span class="dest-ccard__btn">View All &rarr;</span>
+                    </div>
+                </a>
+                <a href="destination.html?dest=russia" class="dest-ccard" data-index="11">
+                    <img src="images/dest-russia.png" alt="Russia" class="dest-ccard__img">
+                    <div class="dest-ccard__info">
+                        <h3>Russia</h3>
+                        <p>Packages</p><span class="dest-ccard__btn">View All &rarr;</span>
+                    </div>
+                </a>
+                <a href="destination.html?dest=mauritius" class="dest-ccard" data-index="12">
+                    <img src="images/dest-mauritius.png" alt="Mauritius" class="dest-ccard__img">
+                    <div class="dest-ccard__info">
+                        <h3>Mauritius</h3>
+                        <p>4 Packages</p><span class="dest-ccard__btn">View All &rarr;</span>
+                    </div>
+                </a>
+                <a href="destination.html?dest=thailand" class="dest-ccard" data-index="13">
+                    <img src="images/dest-thailand.png" alt="Thailand" class="dest-ccard__img">
+                    <div class="dest-ccard__info">
+                        <h3>Thailand</h3>
+                        <p>8 Packages</p><span class="dest-ccard__btn">View All &rarr;</span>
+                    </div>
+                </a>
+                <a href="destination.html?dest=turkey" class="dest-ccard" data-index="14">
+                    <img src="images/dest-turkey.png" alt="Turkey" class="dest-ccard__img">
+                    <div class="dest-ccard__info">
+                        <h3>Turkey</h3>
+                        <p>5 Packages</p><span class="dest-ccard__btn">View All &rarr;</span>
+                    </div>
+                </a>
+                <a href="destination.html?dest=vietnam" class="dest-ccard" data-index="15">
+                    <img src="images/dest-vietnam.png" alt="Vietnam" class="dest-ccard__img">
+                    <div class="dest-ccard__info">
+                        <h3>Vietnam</h3>
+                        <p>6 Packages</p><span class="dest-ccard__btn">View All &rarr;</span>
                     </div>
                 </a>
             </div>
@@ -425,8 +465,8 @@
             <div class="container">
                 <div class="footer__grid">
                     <div class="footer__col">
-                        <div class="footer__brand"><span class="navbar__logo-we">WE</span><span
-                                class="navbar__logo-plan">PLAN</span><span class="navbar__logo-trips">TRIPS</span></div>
+                        <div class="footer__brand"><img src="assets/logo.png" alt="WE PLAN TRIPS"
+                                class="footer__logo-img"></div>
                         <p class="footer__about">Your trusted partner for unforgettable travel experiences. We turn your
                             travel dreams into reality with curated itineraries and premium service.</p>
                         <div class="footer__socials">
@@ -440,7 +480,7 @@
                         <h4 class="footer__heading">Quick Links</h4>
                         <ul class="footer__links">
                             <li><a href="#hero">Home</a></li>
-                            <li><a href="#about">About Us</a></li>
+                            <li><a href="about.html">About Us</a></li>
                             <li><a href="#destinations">Destinations</a></li>
                             <li><a href="#services">Services</a></li>
                             <li><a href="#testimonials">Testimonials</a></li>
@@ -449,11 +489,11 @@
                     <div class="footer__col">
                         <h4 class="footer__heading">Top Destinations</h4>
                         <ul class="footer__links">
-                            <li><a href="#">Bali, Indonesia</a></li>
-                            <li><a href="#">Maldives</a></li>
-                            <li><a href="#">Dubai, UAE</a></li>
-                            <li><a href="#">Kashmir, India</a></li>
-                            <li><a href="#">Switzerland</a></li>
+                            <li><a href="destination.html?dest=bali">Bali, Indonesia</a></li>
+                            <li><a href="destination.html?dest=dubai">Dubai, UAE</a></li>
+                            <li><a href="destination.html?dest=japan">Japan</a></li>
+                            <li><a href="destination.html?dest=greece">Greece</a></li>
+                            <li><a href="destination.html?dest=switzerland">Switzerland</a></li>
                         </ul>
                     </div>
                     <div class="footer__col">

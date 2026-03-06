@@ -405,8 +405,11 @@
 /* Mobile */
 @media (max-width: 480px) {
     .page-hero {
-        height: 35vh;
-        min-height: 260px;
+        height: auto;
+        min-height: 320px;
+        padding-top: 80px;
+        /* Account for navbar */
+        padding-bottom: 2rem;
     }
 
     .dest-listing__grid {

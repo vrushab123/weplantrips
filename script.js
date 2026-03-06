@@ -285,6 +285,28 @@
 
         window.addEventListener('resize', () => updateDestCarousel(false));
 
+        // Prev / Next button wiring
+        const destPrevBtn = document.getElementById('dest-prev');
+        const destNextBtn = document.getElementById('dest-next');
+
+        if (destPrevBtn) {
+            destPrevBtn.addEventListener('click', () => {
+                destCurrentIndex = (destCurrentIndex - 1 + destCards.length) % destCards.length;
+                updateDestCarousel();
+                stopDestAutoPlay();
+                startDestAutoPlay();
+            });
+        }
+
+        if (destNextBtn) {
+            destNextBtn.addEventListener('click', () => {
+                destCurrentIndex = (destCurrentIndex + 1) % destCards.length;
+                updateDestCarousel();
+                stopDestAutoPlay();
+                startDestAutoPlay();
+            });
+        }
+
         destCarousel.addEventListener('mouseenter', stopDestAutoPlay);
         destCarousel.addEventListener('mouseleave', () => {
             if (!isDragging) startDestAutoPlay();

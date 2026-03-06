@@ -261,22 +261,44 @@ ul {
 .navbar__logo {
     display: flex;
     align-items: center;
-    gap: 6px;
-    font-weight: 800;
-    font-size: 1.35rem;
-    letter-spacing: 1px;
 }
 
-.navbar__logo-we {
-    color: var(--orange);
+.navbar__logo-img {
+    height: 64px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+    filter:
+        drop-shadow(0 0 6px rgba(255, 255, 255, 0.9)) drop-shadow(0 0 14px rgba(255, 255, 255, 0.6)) drop-shadow(0 0 28px rgba(255, 255, 255, 0.3));
+    transition: filter var(--transition-fast), transform var(--transition-fast);
 }
 
-.navbar__logo-plan {
-    color: var(--white);
+.navbar__logo-img:hover {
+    filter:
+        drop-shadow(0 0 8px rgba(255, 255, 255, 1)) drop-shadow(0 0 18px rgba(255, 255, 255, 0.8)) drop-shadow(0 0 36px rgba(255, 255, 255, 0.4));
+    transform: scale(1.04);
 }
 
-.navbar__logo-trips {
-    color: var(--orange);
+/* Footer logo image */
+.footer__logo-img {
+    height: 70px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+    margin-bottom: 1rem;
+    filter:
+        brightness(1.1) drop-shadow(0 0 5px rgba(255, 255, 255, 0.7)) drop-shadow(0 0 12px rgba(255, 255, 255, 0.35));
+}
+
+/* Loader logo image */
+.loader__logo-img {
+    height: 90px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 2rem;
+    filter:
+        brightness(1.15) drop-shadow(0 0 8px rgba(255, 255, 255, 0.9)) drop-shadow(0 0 20px rgba(255, 255, 255, 0.5)) drop-shadow(0 0 40px rgba(255, 255, 255, 0.25));
 }
 
 .navbar__menu {
@@ -760,6 +782,44 @@ ul {
     cursor: grab;
 }
 
+/* ── Prev / Next Buttons ── */
+.dest-carousel__btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 20;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.35);
+    background: var(--orange);
+    color: var(--white);
+    font-size: 1.3rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 6px 24px rgba(232, 89, 29, 0.45);
+    transition: background 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.dest-carousel__btn--prev {
+    left: 1.5rem;
+}
+
+.dest-carousel__btn--next {
+    right: 1.5rem;
+}
+
+.dest-carousel__btn:hover {
+    background: var(--royal-blue);
+    border-color: rgba(255, 255, 255, 0.6);
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 8px 30px rgba(26, 58, 143, 0.5);
+}
+
+
 .dest-carousel.dragging,
 .dest-carousel.dragging .dest-ccard,
 .dest-carousel.dragging .dest-carousel__track {
@@ -899,12 +959,49 @@ ul {
 /* Mobile Adjustments */
 @media (max-width: 768px) {
     .dest-ccard {
-        flex: 0 0 80vw;
-        height: 250px;
+        flex: 0 0 72vw;
+        height: 200px;
+        margin: 0 0.8rem;
+        border-radius: 18px;
     }
 
     .dest-ccard.active {
         transform: scale(1.05);
+    }
+
+    .dest-ccard__info h3 {
+        font-size: 1.3rem;
+    }
+
+    .dest-ccard__info p {
+        font-size: 0.8rem;
+    }
+
+    /* Smaller nav buttons on mobile */
+    .dest-carousel__btn {
+        width: 38px;
+        height: 38px;
+        font-size: 1rem;
+    }
+
+    .dest-carousel__btn--prev {
+        left: 0.6rem;
+    }
+
+    .dest-carousel__btn--next {
+        right: 0.6rem;
+    }
+
+    .dest-carousel {
+        padding: 2.5rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .dest-ccard {
+        flex: 0 0 80vw;
+        height: 175px;
+        border-radius: 14px;
     }
 }
 
@@ -1338,6 +1435,113 @@ ul {
 }
 
 /* ======================================================
+   OUR BEAUTIFUL PAGES (About Page)
+   ====================================================== */
+.beautiful-pages {
+    padding: 5rem 0;
+    background: var(--off-white);
+}
+
+.beautiful-pages__label {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    color: var(--orange);
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.adv-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.adv-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+    display: flex;
+    flex-direction: column;
+}
+
+.adv-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.adv-card__img-wrapper {
+    width: 100%;
+    height: 380px;
+    overflow: hidden;
+}
+
+.adv-card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+}
+
+.adv-card:hover .adv-card__img {
+    transform: scale(1.08);
+}
+
+.adv-card__content {
+    padding: 1.8rem 1.5rem;
+    flex-grow: 1;
+}
+
+.adv-card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.adv-card__title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 0.2rem;
+}
+
+.adv-card__rating {
+    font-size: 0.8rem;
+    color: var(--gray-600);
+}
+
+.adv-card__price {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--orange);
+}
+
+.adv-card__desc {
+    font-size: 0.85rem;
+    color: var(--gray-600);
+    line-height: 1.6;
+}
+
+.adv-card__footer {
+    display: flex;
+    background: var(--orange);
+    color: var(--white);
+    padding: 1rem 1.5rem;
+    gap: 1.5rem;
+}
+
+.adv-card__meta {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* ======================================================
    RESPONSIVE
    ====================================================== */
 
@@ -1486,6 +1690,15 @@ ul {
     .footer__grid {
         grid-template-columns: 1fr 1fr;
         gap: 2rem;
+    }
+
+    /* Beautiful Pages */
+    .adv-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .adv-card__img-wrapper {
+        height: 300px;
     }
 }
 
@@ -1653,5 +1866,14 @@ ul {
     .footer__grid {
         grid-template-columns: 1fr;
         gap: 2rem;
+    }
+
+    /* Beautiful Pages */
+    .adv-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .adv-card__img-wrapper {
+        height: 250px;
     }
 }
